@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="stanford-corenlp-full-2015-12-09" level="application" />
+    <orderEntry type="library" name="jaws-bin" level="application" />
   </component>
 </module>

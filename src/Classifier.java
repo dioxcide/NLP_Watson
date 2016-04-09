@@ -1,13 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.io.*;
 
+import POSParsing.NERParser;
+import POSParsing.NERTuple;
 import POSParsing.TreeParser;
-import edu.smu.tspell.wordnet.NounSynset;
-import edu.smu.tspell.wordnet.Synset;
-import edu.smu.tspell.wordnet.SynsetType;
-import edu.smu.tspell.wordnet.WordNetDatabase;
+import POSParsing.WordBank;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
+import edu.stanford.nlp.ling.Word;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.trees.Tree;
@@ -18,70 +19,84 @@ import edu.stanford.nlp.util.CoreMap;
 /**
  * Created by Tony on 4/5/2016.
  */
-public class Classifier {
+public class Classifier
+{
 
-        public static List<Tree> parse(String text) {
-            Properties props = new Properties();
-            props.setProperty("annotators", "tokenize, ssplit, pos, lemma, parse");
-            StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
+    public static List<Tree> parse(String text) {
+        Properties props = new Properties();
+        props.setProperty("annotators", "tokenize, ssplit, pos, lemma, parse");
+        StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 
-            // create an empty Annotation just with the given text
-            Annotation document = new Annotation(text);
+        // create an empty Annotation just with the given text
+        Annotation document = new Annotation(text);
 
-            // run all Annotators on this text
-            pipeline.annotate(document);
-            List<CoreMap> sentences = document.get(SentencesAnnotation.class);
+        // run all Annotators on this text
+        pipeline.annotate(document);
+        List<CoreMap> sentences = document.get(SentencesAnnotation.class);
 
-            List<Tree> result = new ArrayList<Tree>();
-            for (CoreMap sentence : sentences) {
-                Tree tree = sentence.get(TreeAnnotation.class);
-                result.add(tree);
-            }
-
-            return result;
+        List<Tree> result = new ArrayList<Tree>();
+        for (CoreMap sentence : sentences) {
+            Tree tree = sentence.get(TreeAnnotation.class);
+            result.add(tree);
         }
 
-        private static String searchWordNet(String word, SynsetType type){
-            NounSynset nounSynset;
-            NounSynset[] hyponyms;
+        return result;
+    }
 
-            WordNetDatabase database = WordNetDatabase.getFileInstance();
-            Synset[] synsets = database.getSynsets(word, type);
+    public static void Categorize(ArrayList<NERTuple> list)
+    {
+        ArrayList<NERTuple> filterlist = new ArrayList<NERTuple>();
 
-            for (int i = 0; i < synsets.length; i++) {
-                nounSynset = (NounSynset)(synsets[i]);
-                hyponyms = nounSynset.getHyponyms();
-                System.err.println(nounSynset.getWordForms()[0] +
-                        ": " + nounSynset.getDefinition() + ") has " + hyponyms.length + " hyponyms");
-            }
+        String sentence = "";
 
-            return "null";
-        }
-
-        private static void WordNetConverter(String word, String POS){
-            if(POS == "NN"){
-                searchWordNet(word, SynsetType.NOUN);
+        for(NERTuple x : list)
+        {
+            sentence += x.getWord() + " ";
+            if(!x.getNERTag().equals("O"))
+            {
+                //System.out.println(x.getNERTag());
+                filterlist.add(x);
             }
         }
 
-        public static void main(String[] args) {
-            System.setProperty("wordnet.database.dir", "C:\\Program Files (x86)\\WordNet\\2.1\\dict");
-            TreeParser temp = new TreeParser();
-
-            String text =
-            "The truck was stolen in Queretaro State and recovered in neighboring Mexico State.";
-
-//            List<Tree> trees = parse(text);
-//            for (Tree tree : trees) {
-//                String parseTree = tree.toString();
-//
-//            }
-
-            System.out.println(temp.getPOS(text));
-
-//            WordNetConverter("Mexico", "NN");
+        System.out.println("\n--------------------------\n");
+        System.out.println("SENTENCE: " + sentence);
+        System.out.println("Geography: " + WordBank.CheckGeographyBank(sentence));
+        System.out.println("Movies: " + WordBank.CheckMovieBank(sentence));
+        System.out.println("Music: " + WordBank.CheckMusicBank(sentence));
+        System.out.println("\n--------------------------\n");
+    }
 
 
+        public static void main(String[] args)
+        {
+
+
+            String path = new File("").getAbsolutePath();
+            path+= "/src/sample.txt";
+            try
+            {
+                FileReader filereader = new FileReader(path);
+                BufferedReader bufferedreader = new BufferedReader(filereader);
+                ArrayList<String> testSet = new ArrayList<String>();
+
+                String line = null;
+                while((line = bufferedreader.readLine()) != null)
+                {
+                    ArrayList<NERTuple> sentence = NERParser.processNER(line);
+                    Categorize(sentence);
+
+                }
+
+                bufferedreader.close();
+
+
+
+            }
+            catch(Exception e)
+            {
+
+            }
         }
 
 }

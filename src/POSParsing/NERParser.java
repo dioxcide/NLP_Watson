@@ -15,11 +15,7 @@ import java.util.Properties;
  */
 public class NERParser {
 
-    public NERParser(){
-
-    }
-
-    private ArrayList<NERTuple> processNER(String w){
+    public static ArrayList<NERTuple> processNER(String w){
         ArrayList<NERTuple> tupleList = new ArrayList<>();
 
         // creates a StanfordCoreNLP object, with POS tagging, lemmatization, NER, parsing, and coreference resolution
@@ -28,7 +24,7 @@ public class NERParser {
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 
         // read some text from the file..
-//        File inputFile = new File("src/test/resources/sample-content.txt");
+        //File inputFile = new File("src/test/resources/sample-content.txt");
 
         // create an empty Annotation just with the given text
         Annotation document = new Annotation(w);
@@ -51,7 +47,7 @@ public class NERParser {
                 // this is the NER label of the token
                 String ne = token.get(CoreAnnotations.NamedEntityTagAnnotation.class);
 
-                System.out.println("word: " + word + " ne:" + ne);
+                //System.out.println("word: " + word + " ne:" + ne);
 
                 NERTuple temp = new NERTuple(ne, word);
                 tupleList.add(temp);

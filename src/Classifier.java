@@ -112,12 +112,24 @@ public class Classifier
 
     public static void main(String[] args) {
 
-        String path = new File("").getAbsolutePath();
         ArrayList<String> sentenceList = new ArrayList<String>();
         ArrayList<Tree> treeList = new ArrayList<Tree>();
+        String path = new File("").getAbsolutePath();
+        path+= "/src/sample.txt";
 
         ArrayList<ArrayList<NERTuple>> NERList = new ArrayList<ArrayList<NERTuple>>();
-        path+= "/src/sample.txt";
+
+        File f = new File(args[0]);
+
+        if(!f.exists())
+        {
+            System.out.println("Error: " + args[0] + " is not a file. Running sample.txt");
+        }
+        else
+        {
+            path = args[0];
+        }
+
         try
         {
             FileReader filereader = new FileReader(path);
@@ -126,6 +138,10 @@ public class Classifier
             String line = null;
             while((line = bufferedreader.readLine()) != null)
             {
+                if(line.length() == 0)
+                {
+                    continue;
+                }
                 sentenceList.add(line);
             }
 
@@ -149,6 +165,7 @@ public class Classifier
         {
 
         }
+
 
     }
 }

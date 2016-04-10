@@ -43,7 +43,7 @@ public class WordBank {
     public static int CheckGeographyBank(String sentence)
     {
         String[] GeographyBank = {  "capital","deep","deeper","deepest","continent",
-                                    "countries","border","mountain","world","ocean"};
+                                    "countries","border","mountain","world","ocean","highest"};
 
         return CountWords(sentence,GeographyBank);
     }

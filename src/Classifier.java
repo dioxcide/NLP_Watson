@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.io.*;
@@ -47,8 +48,7 @@ public class Classifier
         int musicScore = WordBank.CheckMusicBank(sentence);
         int movieScore = WordBank.CheckMovieBank(sentence);
 
-        System.out.println("\n------------------\n");
-        System.out.println("Sentence: " + sentence);
+        System.out.println("<QUESTION> " + sentence);
         if(geoScore ==  musicScore && musicScore == movieScore)
         {
 
@@ -72,21 +72,21 @@ public class Classifier
             }
             if(locationScore > 0 && personScore == 0)
             {
-                System.out.println("Category: Geography");
+                System.out.println("<CATEGORY> Geography");
             }
             else if(personScore > 0 && locationScore > 0)
             {
-                System.out.println("Category: Music");
+                System.out.println("<CATEGORY> Music");
             }
             else
             {
                 if(sentence.contains("by"))
                 {
-                    System.out.println("Category: Movie");
+                    System.out.println("<CATEGORY> Movie");
                 }
                 else
                 {
-                    System.out.println("Category: Music");
+                    System.out.println("<CATEGORY> Music");
                 }
             }
         }
@@ -94,19 +94,19 @@ public class Classifier
         {
             if(geoScore > musicScore && geoScore > movieScore)
             {
-                System.out.println("Category: Geography");
+                System.out.println("<CATEGORY> Geography");
             }
             else if(movieScore > geoScore && movieScore > musicScore)
             {
-                System.out.println("Category: Movie");
+                System.out.println("<CATEGORY> Movie");
             }
             else if(musicScore > movieScore && musicScore > geoScore)
             {
-                System.out.println("Category: Music");
+                System.out.println("<CATEGORY> Music");
             }
         }
-        System.out.println("Tree: " + tree);
-        System.out.println("\n------------------\n");
+        System.out.println("<PARSETREE>");
+        tree.pennPrint();
 
     }
 
@@ -130,20 +130,24 @@ public class Classifier
             }
 
             bufferedreader.close();
+
+
+            for(String sentence : sentenceList)
+            {
+                NERList.add(NERParser.processNER(sentence));
+                treeList.add(parse(sentence).get(0));
+            }
+
+            for(int i = 0; i < sentenceList.size();i++)
+            {
+                Categorize(sentenceList.get(i),NERList.get(i),treeList.get(i));
+                System.out.println();
+            }
+
         }
         catch(Exception e)
         {
 
-        }
-        for(String sentence : sentenceList)
-        {
-            NERList.add(NERParser.processNER(sentence));
-            treeList.add(parse(sentence).get(0));
-        }
-
-        for(int i = 0; i < sentenceList.size();i++)
-        {
-            Categorize(sentenceList.get(i),NERList.get(i),treeList.get(i));
         }
 
     }

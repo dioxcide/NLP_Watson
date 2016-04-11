@@ -104,6 +104,21 @@ public class Classifier
             {
                 System.out.println("<CATEGORY> Music");
             }
+            else
+            {
+                if(sentence.contains("born") || sentence.contains("who"))
+                {
+                    System.out.println("<CATEGORY> Music");
+                }
+                else if(sentence.contains("in") || sentence.toLowerCase().contains("was"))
+                {
+                    System.out.println("<CATEGORY> Movie");
+                }
+                else
+                {
+                    System.out.println("<CATEGORY> Geography");
+                }
+            }
         }
         System.out.println("<PARSETREE>");
         tree.pennPrint();

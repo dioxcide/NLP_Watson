@@ -15,3 +15,5 @@ the following prompt should run the program
 java -jar NLP_Watson_Prototype.jar input.txt
 
 NOTE: NLP_Watson_prototype.jar and input.txt must be in the same directory in order to run properly.
+Also within the same directory create another folder called "sources".  Copy all the file contents in the
+CoreNLP library and paste it within the sources folder to make it run properly.

@@ -57,4 +57,5 @@ public class NERParser {
 
         return tupleList;
     }
+
 }

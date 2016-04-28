@@ -125,8 +125,8 @@ public class Classifier
 
     }
 
-    public static void main(String[] args) {
-
+    static void part1(String args[])
+    {
         ArrayList<String> sentenceList = new ArrayList<String>();
         ArrayList<Tree> treeList = new ArrayList<Tree>();
         String path = new File("").getAbsolutePath();
@@ -180,7 +180,25 @@ public class Classifier
         {
 
         }
+    }
 
+    static void part2(String args[])
+    {
+        String sample = "Was Loren born in Italy?";
+        Labeler.runSentence(sample);
+    }
 
+    public static void main(String[] args) {
+
+        int flag = 1;
+
+        if(flag == 0)
+        {
+            part1(args);
+        }
+        else
+        {
+            part2(args);
+        }
     }
 }

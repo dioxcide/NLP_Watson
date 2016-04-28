@@ -189,8 +189,15 @@ public class Classifier
 
         ArrayList<WordProperty> temp = Labeler.runSentence(sample);
 
-
-
+        for(WordProperty wordproperty : temp)
+        {
+            System.out.println("\n--------------\n");
+            System.out.println("Word: " + wordproperty.word);
+            System.out.println("POSTag: " + wordproperty.POStag);
+            System.out.println("NERTag: " + wordproperty.NERtag);
+            System.out.println("Table: " + wordproperty.table);
+            System.out.println("\n--------------\n");
+        }
     }
 
     public static void main(String[] args) {

@@ -135,11 +135,6 @@ public class Labeler {
 
         mapWords(importantWords);
 
-        for(WordProperty x : importantWords)
-        {
-            System.out.println(x.word + ":" + x.POStag);
-        }
-
         return importantWords;
     }
 }

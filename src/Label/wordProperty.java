@@ -13,7 +13,7 @@ public class WordProperty {
     {
         this.word = word;
         this.POStag = POStag;
-        this.table = "";
+        this.table = "N/A";
         this.NERtag = "";
     }
 }

@@ -1,9 +1,10 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.io.*;
 
+import Label.Labeler;
+import Label.WordProperty;
 import POSParsing.NERParser;
 import POSParsing.NERTuple;
 import POSParsing.WordBank;
@@ -185,7 +186,11 @@ public class Classifier
     static void part2(String args[])
     {
         String sample = "Was Loren born in Italy?";
-        Labeler.runSentence(sample);
+
+        ArrayList<WordProperty> temp = Labeler.runSentence(sample);
+
+
+
     }
 
     public static void main(String[] args) {

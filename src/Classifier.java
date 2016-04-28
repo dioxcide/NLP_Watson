@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Properties;
 import java.io.*;
 
+import DatabaseAccess.DBAccess;
 import POSParsing.NERParser;
 import POSParsing.NERTuple;
 import POSParsing.WordBank;
@@ -127,60 +128,60 @@ public class Classifier
 
     public static void main(String[] args) {
 
-        ArrayList<String> sentenceList = new ArrayList<String>();
-        ArrayList<Tree> treeList = new ArrayList<Tree>();
-        String path = new File("").getAbsolutePath();
-        path+= "/src/sample.txt";
+//        ArrayList<String> sentenceList = new ArrayList<String>();
+//        ArrayList<Tree> treeList = new ArrayList<Tree>();
+//        String path = new File("").getAbsolutePath();
+//        path+= "/src/sample.txt";
+//
+//        ArrayList<ArrayList<NERTuple>> NERList = new ArrayList<ArrayList<NERTuple>>();
+//
+//        File f = new File(args[0]);
+//
+//        if(!f.exists())
+//        {
+//            System.out.println("Error: " + args[0] + " is not a file. Running sample.txt");
+//        }
+//        else
+//        {
+//            path = args[0];
+//        }
+//
+//        try
+//        {
+//            FileReader filereader = new FileReader(path);
+//            BufferedReader bufferedreader = new BufferedReader(filereader);
+//
+//            String line = null;
+//            while((line = bufferedreader.readLine()) != null)
+//            {
+//                if(line.length() == 0)
+//                {
+//                    continue;
+//                }
+//                sentenceList.add(line);
+//            }
+//
+//            bufferedreader.close();
+//
+//
+//            for(String sentence : sentenceList)
+//            {
+//                NERList.add(NERParser.processNER(sentence));
+//                treeList.add(parse(sentence).get(0));
+//            }
+//
+//            for(int i = 0; i < sentenceList.size();i++)
+//            {
+//                Categorize(sentenceList.get(i),NERList.get(i),treeList.get(i));
+//                System.out.println();
+//            }
+//
+//        }
+//        catch(Exception e)
+//        {
+//
+//        }
 
-        ArrayList<ArrayList<NERTuple>> NERList = new ArrayList<ArrayList<NERTuple>>();
-
-        File f = new File(args[0]);
-
-        if(!f.exists())
-        {
-            System.out.println("Error: " + args[0] + " is not a file. Running sample.txt");
-        }
-        else
-        {
-            path = args[0];
-        }
-
-        try
-        {
-            FileReader filereader = new FileReader(path);
-            BufferedReader bufferedreader = new BufferedReader(filereader);
-
-            String line = null;
-            while((line = bufferedreader.readLine()) != null)
-            {
-                if(line.length() == 0)
-                {
-                    continue;
-                }
-                sentenceList.add(line);
-            }
-
-            bufferedreader.close();
-
-
-            for(String sentence : sentenceList)
-            {
-                NERList.add(NERParser.processNER(sentence));
-                treeList.add(parse(sentence).get(0));
-            }
-
-            for(int i = 0; i < sentenceList.size();i++)
-            {
-                Categorize(sentenceList.get(i),NERList.get(i),treeList.get(i));
-                System.out.println();
-            }
-
-        }
-        catch(Exception e)
-        {
-
-        }
-
-
+        DBAccess temp = new DBAccess();
     }
 }

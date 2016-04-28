@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NLP_Watson_Prototype:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NLP_Watson_Prototype_jar</output-path>
+    <root id="archive" name="NLP_Watson_Prototype.jar">
+      <element id="module-output" name="NLP_Watson_Prototype" />
+    </root>
+  </artifact>
+</component>

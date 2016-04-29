@@ -9,8 +9,6 @@
     <list default="true" id="f6d37aed-cdb5-4958-b200-f4e0d1c4b3f8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" afterPath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classifier.java" afterPath="$PROJECT_DIR$/src/Classifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" afterPath="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" />
     </list>
     <ignored path="NLP_Watson_Prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -709,7 +707,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461967745737</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="New querys&#10;">
+      <created>1461969042774</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1461969042774</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -788,7 +792,8 @@
     <MESSAGE value="removed printout in method" />
     <MESSAGE value="default to N/A" />
     <MESSAGE value="Shit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shit" />
+    <MESSAGE value="New querys&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="New querys&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

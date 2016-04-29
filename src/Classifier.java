@@ -5,6 +5,7 @@ import java.io.*;
 
 import Label.Labeler;
 import Label.WordProperty;
+import MiddleTier.BusinessTier;
 import POSParsing.NERParser;
 import POSParsing.NERTuple;
 import POSParsing.WordBank;
@@ -186,18 +187,42 @@ public class Classifier
     static void part2(String args[])
     {
         String sample = "Was Loren born in Italy?";
-
+//        sample = "Did Swank win the oscar in 2000?";
+        sample = "Is Mighty Aphrodite by Allen?";
         ArrayList<WordProperty> temp = Labeler.runSentence(sample);
+        BusinessTier bsnRn = new BusinessTier();
 
-        for(WordProperty wordproperty : temp)
-        {
-            System.out.println("\n--------------\n");
-            System.out.println("Word: " + wordproperty.word);
-            System.out.println("POSTag: " + wordproperty.POStag);
-            System.out.println("NERTag: " + wordproperty.NERtag);
-            System.out.println("Table: " + wordproperty.table);
-            System.out.println("\n--------------\n");
-        }
+        bsnRn.determineQuestion(temp);
+
+//        sample = "Was Birdman the best movie in 2015?";
+//        temp = Labeler.runSentence(sample);
+//        bsnRn.determineQuestion(temp);
+
+//        sample = "Did Neeson star in Schindler’s List?";
+//        temp = Labeler.runSentence(sample);
+//        bsnRn.determineQuestion(temp);
+//
+//        for(WordProperty wordproperty : temp)
+//        {
+//            System.out.println("\n--------------\n");
+//            System.out.println("Word: " + wordproperty.word);
+//            System.out.println("POSTag: " + wordproperty.POStag);
+//            System.out.println("NERTag: " + wordproperty.NERtag);
+//            System.out.println("Table: " + wordproperty.table);
+//            System.out.println("\n--------------\n");
+//        }
+
+//        sample = "Is Mighty Aphrodite by Allen?";
+//        temp = Labeler.runSentence(sample);
+//        bsnRn.determineQuestion(temp);
+
+//        sample = "Did Neeson   star in Schindler’s List?";
+//        temp = Labeler.runSentence(sample);
+//        bsnRn.determineQuestion(temp);
+
+//        sample = "Did Swank win the oscar in 2000?";
+//        temp = Labeler.runSentence(sample);
+//        bsnRn.determineQuestion(temp);
     }
 
     public static void main(String[] args) {

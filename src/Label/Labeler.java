@@ -1,5 +1,6 @@
 package Label;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
@@ -159,6 +160,7 @@ public class Labeler {
 
     public static ArrayList<WordProperty> runSentence(String sentence)
     {
+        sentence = sentence.split(" ",2)[1];
         List<Tree> trees = parse(sentence);
         ArrayList<WordProperty> importantWords = new ArrayList<WordProperty>();
 
@@ -170,16 +172,28 @@ public class Labeler {
             for(Tree subtree : tree)
             {
                 if(subtree.label().value().equals("NNP") || subtree.label().value().equals("IN") || subtree.label().value().equals("NN")
-                        || subtree.label().value().equals("VB") || subtree.label().value().equals("JJR") || subtree.label().value().equals("JJ")
-                        || subtree.label().value().equals("JJS")
-                        || subtree.label().value().equals("CD"))
+                        || subtree.label().value().equals("VB") || subtree.label().value().equals("VBD") || subtree.label().value().equals("JJR") || subtree.label().value().equals("JJ")
+                        || subtree.label().value().equals("JJS") || subtree.label().value().equals("CD") ||  subtree.label().value().equals("NNPS")
+                        || subtree.label().value().equals("POS"))
                 {
                     importantWords.add(new WordProperty(subtree.getChild(0).value(),subtree.label().value()));
                 }
             }
         }
 
-        mapWords(importantWords);
+
+        for(WordProperty x : importantWords)
+        {
+            if(Character.isUpperCase(x.word.charAt(0)))
+            {
+                x.POStag = "NNP";
+            }
+
+            if(x.POStag.equals("NNPS"))
+            {
+                x.POStag = "NNP";
+            }
+        }
 
         int size = importantWords.size();
 
@@ -188,13 +202,29 @@ public class Labeler {
             if(importantWords.get(i).POStag.equals("NNP") && importantWords.get(i+1).POStag.equals("NNP"))
             {
                 importantWords.get(i+1).word = importantWords.get(i).word + " " + importantWords.get(i+1).word;
-                importantWords.set(i,null);
-                size--;
+                importantWords.get(i).word = "NULL";
+            }
+            else if(importantWords.get(i).POStag.equals("NNP") && importantWords.get(i+1).POStag.equals("POS"))
+            {
+                importantWords.get(i+1).word = importantWords.get(i).word + importantWords.get(i+1).word;
+                importantWords.get(i+1).POStag = "NNP";
+                importantWords.get(i).word = "NULL";
             }
         }
 
-        importantWords.removeAll(Collections.singleton(null));
 
-        return importantWords;
+        ArrayList<WordProperty> finalList = new ArrayList<WordProperty>();
+
+        for(WordProperty x : importantWords)
+        {
+            if(!x.word.equals("NULL"))
+            {
+                finalList.add(x);
+            }
+        }
+
+        mapWords(finalList);
+
+        return finalList;
     }
 }

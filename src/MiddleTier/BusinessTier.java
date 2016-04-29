@@ -30,7 +30,7 @@ public class BusinessTier {
 
         for(WordProperty temp: querys) {
 
-            if (temp.POStag.equals("NNP") || temp.POStag.equals("CD")) {
+            if (temp.POStag.equals("NNP")) {
 
                 String t1 = dbAccess.searchMovieName(temp.word);
                 boolean t2 = dbAccess.searchMovieYear(temp.word);
@@ -68,6 +68,10 @@ public class BusinessTier {
 //                    pNouns.add(new NounTableTuple(temp.word, "Movie", "year"));
 //                }
 
+            }
+
+            if(temp.POStag.equals("CD")){
+                pNouns.add(new NounTableTuple(temp.word, "Oscar", "year"));
             }
 
             if(!temp.table.equals("N/A")){

@@ -187,21 +187,19 @@ public class Classifier
     static void part2(String args[])
     {
         String sample = "Was Loren born in Italy?";
-//        sample = "Did Swank win the oscar in 2000?";
-        sample = "Is Mighty Aphrodite by Allen?";
         ArrayList<WordProperty> temp = Labeler.runSentence(sample);
         BusinessTier bsnRn = new BusinessTier();
 
         bsnRn.determineQuestion(temp);
 
-//        sample = "Was Birdman the best movie in 2015?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
+        sample = "Was Birdman the best movie in 2015?";
+        temp = Labeler.runSentence(sample);
+        bsnRn.determineQuestion(temp);
 
-//        sample = "Did Neeson star in Schindler’s List?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
-//
+        sample = "Did Neeson star in Schindler’s List?";
+        temp = Labeler.runSentence(sample);
+        bsnRn.determineQuestion(temp);
+
 //        for(WordProperty wordproperty : temp)
 //        {
 //            System.out.println("\n--------------\n");
@@ -212,17 +210,21 @@ public class Classifier
 //            System.out.println("\n--------------\n");
 //        }
 
-//        sample = "Is Mighty Aphrodite by Allen?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
+        sample = "Is Mighty Aphrodite by Allen?";
+        temp = Labeler.runSentence(sample);
+        bsnRn.determineQuestion(temp);
 
-//        sample = "Did Neeson   star in Schindler’s List?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
+        sample = "Did Swank win the oscar in 2000?";
+        temp = Labeler.runSentence(sample);
+        bsnRn.determineQuestion(temp);
 
-//        sample = "Did Swank win the oscar in 2000?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
+        sample = "Did a French actor win the oscar in 2012?";
+        temp = Labeler.runSentence(sample);
+        bsnRn.determineQuestion(temp);
+
+        sample = "Did a movie with Neeson win the oscar for best film?";
+        temp = Labeler.runSentence(sample);
+        bsnRn.determineQuestion(temp);
     }
 
     public static void main(String[] args) {

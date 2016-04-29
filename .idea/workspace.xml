@@ -7,17 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6d37aed-cdb5-4958-b200-f4e0d1c4b3f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/NLP_Watson_Prototype_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_8_11_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Database.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Labeler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/wordProperty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" afterPath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLP_Watson_Prototype.iml" afterPath="$PROJECT_DIR$/NLP_Watson_Prototype.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classifier.java" afterPath="$PROJECT_DIR$/src/Classifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/POSParsing/NERParser.java" afterPath="$PROJECT_DIR$/src/POSParsing/NERParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Label/Labeler.java" afterPath="$PROJECT_DIR$/src/Label/Labeler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Label/wordProperty.java" afterPath="$PROJECT_DIR$/src/Label/wordProperty.java" />
     </list>
     <ignored path="NLP_Watson_Prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,36 +34,78 @@
       <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.962963">
-              <caret line="184" column="18" selection-start-line="184" selection-start-column="18" selection-end-line="184" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+                <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+                <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+                <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+                <element signature="method#main#0;class#Classifier#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NERTuple.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/POSParsing/NERTuple.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="e#408#409#0" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NERParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/POSParsing/NERParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#processNER#0;class#NERParser#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Database.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Labeler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Labeler.java">
+        <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2267003">
-              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7009346">
+              <caret line="149" column="54" selection-start-line="149" selection-start-column="54" selection-end-line="149" selection-end-column="54" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1070#1076#0" expanded="true" />
-                <element signature="e#1368#1382#0" expanded="true" />
-                <element signature="e#4103#4117#0" expanded="true" />
+                <element signature="method#parse#0;class#Labeler#0" expanded="false" />
+                <element signature="method#processNER#0;class#Labeler#0" expanded="false" />
+                <element signature="method#associateTable#0;class#Labeler#0" expanded="false" />
+                <element signature="method#processNERWord#0;class#Labeler#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wordProperty.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wordProperty.java">
+      <file leaf-file-name="WordProperty.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Label/WordProperty.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -87,6 +121,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -110,13 +145,16 @@
         <option value="$PROJECT_DIR$/src/POSParsing/WordBank.java" />
         <option value="$PROJECT_DIR$/src/README.txt" />
         <option value="$PROJECT_DIR$/src/sample.txt" />
-        <option value="$PROJECT_DIR$/src/Database.java" />
         <option value="$PROJECT_DIR$/src/POSParsing/Tuple.java" />
         <option value="$PROJECT_DIR$/src/POSParsing/NERParser.java" />
         <option value="$PROJECT_DIR$/src/Tuple.java" />
-        <option value="$PROJECT_DIR$/src/Classifier.java" />
-        <option value="$PROJECT_DIR$/src/Labeler.java" />
         <option value="$PROJECT_DIR$/src/wordProperty.java" />
+        <option value="$PROJECT_DIR$/src/Label/Database.java" />
+        <option value="$PROJECT_DIR$/src/Database.java" />
+        <option value="$PROJECT_DIR$/src/Labeler.java" />
+        <option value="$PROJECT_DIR$/src/Classifier.java" />
+        <option value="$PROJECT_DIR$/src/Label/WordProperty.java" />
+        <option value="$PROJECT_DIR$/src/Label/Labeler.java" />
       </list>
     </option>
   </component>
@@ -161,8 +199,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,27 +234,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NLP_Watson_Prototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NLP_Watson" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="POSParsing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -564,25 +584,49 @@
       <option name="project" value="LOCAL" />
       <updated>1460344223395</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added word associations with regular nouns.">
+      <created>1461862717934</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1461862717934</updated>
+    </task>
+    <task id="LOCAL-00007" summary="filtered out number">
+      <created>1461877508110</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1461877508110</updated>
+    </task>
+    <task id="LOCAL-00008" summary="removed printout in method">
+      <created>1461877538523</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1461877538523</updated>
+    </task>
+    <task id="LOCAL-00009" summary="default to N/A">
+      <created>1461877745215</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1461877745215</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="109" y="23" width="1049" height="806" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277311" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32681563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2579425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29780564" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3669468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2114846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24131082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24131082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925521" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -638,11 +682,15 @@
     <MESSAGE value="Matched TA's output" />
     <MESSAGE value="fixed an edge case" />
     <MESSAGE value="fix sample text" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix sample text" />
+    <MESSAGE value="Added word associations with regular nouns." />
+    <MESSAGE value="filtered out number" />
+    <MESSAGE value="removed printout in method" />
+    <MESSAGE value="default to N/A" />
+    <option name="LAST_COMMIT_MESSAGE" value="default to N/A" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -651,11 +699,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Label/WordProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,6 +760,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -714,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,6 +796,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -764,6 +825,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -789,6 +854,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -814,6 +883,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,6 +912,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -861,7 +938,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#processNER#0;class#NERParser#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -883,6 +963,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -905,7 +989,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#processNER#0;class#NERParser#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -927,6 +1014,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -935,7 +1026,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#processNER#0;class#NERParser#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -964,6 +1058,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -975,6 +1073,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -987,9 +1089,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6393443">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/POSParsing/WordBank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7688679">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6367925">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/POSParsing/POSTuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31839624">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Label/WordProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#parse#0;class#Classifier#0" expanded="false" />
+            <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part1#0;class#Classifier#0" expanded="false" />
+            <element signature="method#part2#0;class#Classifier#0" expanded="false" />
+            <element signature="method#main#0;class#Classifier#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/POSParsing/NERTuple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44262296">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#408#409#0" expanded="true" />
@@ -998,52 +1161,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6393443">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.962963">
-          <caret line="184" column="18" selection-start-line="184" selection-start-column="18" selection-end-line="184" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#parse#0;class#Classifier#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/POSParsing/WordBank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7688679">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6367925">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/POSParsing/POSTuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31839624">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/POSParsing/NERParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6367925">
+        <state vertical-scroll-proportion="0.0">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1052,33 +1172,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database.java">
+    <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6014151">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.7009346">
+          <caret line="149" column="54" selection-start-line="149" selection-start-column="54" selection-end-line="149" selection-end-column="54" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Labeler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2267003">
-          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1070#1076#0" expanded="true" />
-            <element signature="e#1368#1382#0" expanded="true" />
-            <element signature="e#4103#4117#0" expanded="true" />
+            <element signature="method#parse#0;class#Labeler#0" expanded="false" />
+            <element signature="method#processNER#0;class#Labeler#0" expanded="false" />
+            <element signature="method#associateTable#0;class#Labeler#0" expanded="false" />
+            <element signature="method#processNERWord#0;class#Labeler#0" expanded="false" />
           </folding>
         </state>
       </provider>

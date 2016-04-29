@@ -29,17 +29,17 @@ public class BusinessTier {
         int numberOfTables = 0;
 
         for(WordProperty temp: querys) {
-
+            System.out.println("CURR WORD: "+temp.word);
             if (temp.POStag.equals("NNP")) {
 
-                String t1 = dbAccess.searchMovieName(temp.word);
-                boolean t2 = dbAccess.searchMovieYear(temp.word);
+                boolean t1 = dbAccess.searchMovieName(temp.word);
+//                boolean t2 = dbAccess.searchMovieYear(temp.word);
                 boolean t3 = dbAccess.searchPersonLocation(temp.word);
                 boolean t4 = dbAccess.searchPersonName(temp.word);
 
-                if (t4||t1 != null) {
-                    if (t1!=null) {
-                        if (t1.equals(temp.word) && !tables.contains("Movie")) {
+                if (t4||t1) {
+                    if (t1) {
+                        if (!tables.contains("Movie")) {
                             System.out.println("MOVIE NAME: "+temp.word);
                             tables.add("Movie");
                         }
@@ -76,11 +76,15 @@ public class BusinessTier {
 
             if(!temp.table.equals("N/A")){
                 if (!tables.contains(temp.table)) {
-                    System.out.println("ADDING :"+temp.table);
+                    System.out.println("ADDING :" + temp.table);
+                    if(temp.table == "Actor" && !tables.contains("Person")) {
+
+                        tables.add("Person");
+                    }
                     tables.add(temp.table);
                 }
             }
-
+            System.out.println("TABLE: "+temp.table);
         }
 
         numberOfTables = tables.size();
@@ -108,7 +112,7 @@ public class BusinessTier {
 
         for(NounTableTuple temp: pNouns){
 //            noDuplicates.add(temp);
-
+            System.out.println("DUP NOUNS: " +temp.getNoun());
             for(NounTableTuple temp2: noDuplicates){
                 if(temp.getNoun().equals(temp2.getNoun())){
                     System.out.println("MATCH: "+temp.getNoun());

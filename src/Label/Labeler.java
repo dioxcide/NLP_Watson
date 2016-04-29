@@ -5,6 +5,7 @@ import java.util.*;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.ling.Word;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.trees.Tree;
@@ -179,6 +180,20 @@ public class Labeler {
         }
 
         mapWords(importantWords);
+
+        int size = importantWords.size();
+
+        for(int i = 0 ; i < size-1; i++)
+        {
+            if(importantWords.get(i).POStag.equals("NNP") && importantWords.get(i+1).POStag.equals("NNP"))
+            {
+                importantWords.get(i+1).word = importantWords.get(i).word + " " + importantWords.get(i+1).word;
+                importantWords.set(i,null);
+                size--;
+            }
+        }
+
+        importantWords.removeAll(Collections.singleton(null));
 
         return importantWords;
     }

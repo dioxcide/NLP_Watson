@@ -7,14 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6d37aed-cdb5-4958-b200-f4e0d1c4b3f8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jaws_bin.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_8_11_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_8_11_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/stanford_corenlp_full_2015_12_09.xml" afterPath="$PROJECT_DIR$/.idea/libraries/stanford_corenlp_full_2015_12_09.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" afterPath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLP_Watson_Prototype.iml" afterPath="$PROJECT_DIR$/NLP_Watson_Prototype.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classifier.java" afterPath="$PROJECT_DIR$/src/Classifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java" afterPath="$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" afterPath="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" />
     </list>
     <ignored path="NLP_Watson_Prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,14 +34,14 @@
       <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Classifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="232" column="15" selection-start-line="232" selection-start-column="15" selection-end-line="232" selection-end-column="15" />
+            <state relative-caret-position="595">
+              <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
               <folding>
                 <element signature="method#parse#0;class#Classifier#0" expanded="false" />
                 <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
                 <element signature="method#part1#0;class#Classifier#0" expanded="false" />
                 <element signature="e#6110#6166#0" expanded="false" />
-                <element signature="e#8489#8537#0" expanded="false" />
+                <element signature="e#8483#8531#0" expanded="false" />
                 <element signature="method#main#0;class#Classifier#0" expanded="false" />
               </folding>
             </state>
@@ -529,12 +524,19 @@
       <option name="project" value="LOCAL" />
       <updated>1460344154700</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Couple of questions dont work. Need to do more word association">
+      <created>1462001891293</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1462001891293</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1096" height="1896" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -544,8 +546,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2579425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37209302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37209302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295519" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29645094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -602,7 +604,8 @@
     <MESSAGE value="finished categorizing (non smart way)" />
     <MESSAGE value="Matched TA's output" />
     <MESSAGE value="fixed an edge case" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed an edge case" />
+    <MESSAGE value="Couple of questions dont work. Need to do more word association" />
+    <option name="LAST_COMMIT_MESSAGE" value="Couple of questions dont work. Need to do more word association" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -661,7 +664,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -698,7 +701,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -728,7 +731,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -758,7 +761,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -788,7 +791,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -818,7 +821,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -864,7 +867,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -910,7 +913,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -948,7 +951,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -963,7 +966,7 @@
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -1073,14 +1076,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="232" column="15" selection-start-line="232" selection-start-column="15" selection-end-line="232" selection-end-column="15" />
+        <state relative-caret-position="595">
+          <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
           <folding>
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />
             <element signature="e#6110#6166#0" expanded="false" />
-            <element signature="e#8489#8537#0" expanded="false" />
+            <element signature="e#8483#8531#0" expanded="false" />
             <element signature="method#main#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>

@@ -234,9 +234,9 @@ public class Classifier
 
 
             /*---------------------NOT WORKING------------------------------*/
-//            sample = "Who directed the best movie in 2010?";
-//            tupleTemp = Labeler.runSentence(sample);
-//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
+            sample = "Who directed the best movie in 2010?";
+            tupleTemp = Labeler.runSentence(sample);
+            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 
 //            sample = "Which actress won the oscar in 2012?";
 //            tupleTemp = Labeler.runSentence(sample);

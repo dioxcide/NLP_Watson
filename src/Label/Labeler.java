@@ -90,7 +90,7 @@ public class Labeler {
     private static String associateTable(String word)
     {
         String[] directorList = {"director","by","directed"};
-        String[] actorList = {"actor","actress","star"};
+        String[] actorList = {"actor","actress","star","starred"};
         String[] oscarList = {"oscar"};
         String[] movieList = {"movie"};
 
@@ -203,7 +203,7 @@ public class Labeler {
                 if(subtree.label().value().equals("NNP") || subtree.label().value().equals("IN") || subtree.label().value().equals("NN")
                         || subtree.label().value().equals("VB") || subtree.label().value().equals("VBD") || subtree.label().value().equals("JJR") || subtree.label().value().equals("JJ")
                         || subtree.label().value().equals("JJS") || subtree.label().value().equals("CD") ||  subtree.label().value().equals("NNPS")
-                        || subtree.label().value().equals("POS"))
+                        || subtree.label().value().equals("POS") || subtree.label().value().equals("VBN"))
                 {
                     importantWords.add(new WordProperty(subtree.getChild(0).value(),subtree.label().value()));
                 }

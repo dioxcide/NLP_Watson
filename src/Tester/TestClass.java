@@ -6,7 +6,6 @@ import Label.WordProperty;
 
 import java.util.ArrayList;
 
-import org.junit.Test;
 
 
 /**

@@ -40,6 +40,34 @@ public class DBAccess {
         return false;
     }
 
+    public String executeWHQuery(String query){
+        try{
+            //String dir = System.getProperty("user.dir");
+            Class.forName("org.sqlite.JDBC");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:" +
+                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+
+            Statement stmt;
+
+            stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+
+            if(rs.next()){
+                return rs.getString(1);
+            }
+
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     public boolean searchPersonName(String name){
         try{
             //String dir = System.getProperty("user.dir");
@@ -98,7 +126,7 @@ public class DBAccess {
         return false;
     }
 
-    public String searchMovieName(String name){
+    public boolean searchMovieName(String name){
         try{
             //String dir = System.getProperty("user.dir");
             Class.forName("org.sqlite.JDBC");
@@ -109,10 +137,10 @@ public class DBAccess {
 
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Movie WHERE Movie.name" +
-                    " LIKE '%"+name+"%'");
+                    " LIKE '"+name+"'");
 
             if(rs.next()){
-                return rs.getString("name");
+                return true;
             }
 
             rs.close();
@@ -124,7 +152,7 @@ public class DBAccess {
             e.printStackTrace();
         }
 
-        return null;
+        return false;
     }
 
     public boolean searchMovieYear(String year){
@@ -139,6 +167,35 @@ public class DBAccess {
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Movie WHERE Movie.year" +
                     " LIKE '%"+year+"%'");
+
+            if(rs.next()){
+                return true;
+            }
+
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public boolean searchIsActor(String name){
+        try{
+            //String dir = System.getProperty("user.dir");
+            Class.forName("org.sqlite.JDBC");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:" +
+                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+
+            Statement stmt;
+
+            stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM Person INNER JOIN ACTOR ON Actor.actor_id = Person.id WHERE Person.name" +
+                    " LIKE '%"+name+"'");
 
             if(rs.next()){
                 return true;

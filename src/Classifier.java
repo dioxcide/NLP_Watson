@@ -4,6 +4,7 @@ import java.util.Properties;
 import java.io.*;
 
 import Label.Labeler;
+import Label.Tuple;
 import Label.WordProperty;
 import MiddleTier.BusinessTier;
 import POSParsing.NERParser;
@@ -186,43 +187,159 @@ public class Classifier
 
     static void part2(String args[])
     {
-        String sample = "Was Loren born in Italy?";
-//        sample = "Did Swank win the oscar in 2000?";
-        sample = "Is Mighty Aphrodite by Allen?";
-        ArrayList<WordProperty> temp = Labeler.runSentence(sample).labeledWordList;
+        String sample = "Who Neeson star in Schindler’s List?";
+        Tuple tupleTemp = Labeler.runSentence(sample);
         BusinessTier bsnRn = new BusinessTier();
+        boolean yesNoAnswer = false;
+        String whAnswer = "";
 
-        bsnRn.determineQuestion(temp);
+        System.out.println("Q WORD: "+tupleTemp.questionWord);
+        System.out.println("OSCAR: "+tupleTemp.oscarType);
 
-//        sample = "Was Birdman the best movie in 2015?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
-
-//        sample = "Did Neeson star in Schindler’s List?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
+        if(tupleTemp.questionWord.equals("Who") || tupleTemp.questionWord.equals("Which") || tupleTemp.questionWord.equals("When") ){
+            /*---------------------WORKING------------------------------*/
+//            sample = "Who directed Schindler’s List?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 //
-//        for(WordProperty wordproperty : temp)
-//        {
-//            System.out.println("\n--------------\n");
-//            System.out.println("Word: " + wordproperty.word);
-//            System.out.println("POSTag: " + wordproperty.POStag);
-//            System.out.println("NERTag: " + wordproperty.NERtag);
-//            System.out.println("Table: " + wordproperty.table);
-//            System.out.println("\n--------------\n");
-//        }
+//            if(!whAnswer.equals(null)){
+//                System.out.println("Answer: "+whAnswer);
+//            }
+//            else{
+//                System.out.println("Answer: "+whAnswer);
+//            }
+//
+//            sample = "Who won the oscar for best actor in 2005?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
+//
+//            if(!whAnswer.equals(null)){
+//                System.out.println("Answer: "+whAnswer);
+//            }
+//            else{
+//                System.out.println("Answer: "+whAnswer);
+//            }
+//
+//            sample = "When did Blanchett win an oscar for best actress?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
+//
+//            if(!whAnswer.equals(null)){
+//                System.out.println("Answer: "+whAnswer);
+//            }
+//            else{
+//                System.out.println("Answer: "+whAnswer);
+//            }
+            /*---------------------Partly WORKING------------------------------*/
 
-//        sample = "Is Mighty Aphrodite by Allen?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
 
-//        sample = "Did Neeson   star in Schindler’s List?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
+            /*---------------------NOT WORKING------------------------------*/
+//            sample = "Who directed the best movie in 2010?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 
-//        sample = "Did Swank win the oscar in 2000?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
+//            sample = "Which actress won the oscar in 2012?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
+
+//            sample = "Which movie won the oscar in 2000?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
+
+
+        }
+        else{
+            /*---------------------WORKING------------------------------*/
+//            sample = "Is Kubrick a director?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList);
+//
+//            if(yesNoAnswer){
+//                System.out.println("Answer: Yes");
+//            }
+//            else{
+//                System.out.println("Answer: No");
+//            }
+//
+//            sample = "Is Mighty Aphrodite by Allen?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList);
+//
+//            if(yesNoAnswer){
+//                System.out.println("Answer: Yes");
+//            }
+//            else{
+//                System.out.println("Answer: No");
+//            }
+//
+//            sample = "Was Loren born in Italy?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList);
+//
+//            if(yesNoAnswer){
+//                System.out.println("Answer: Yes");
+//            }
+//            else{
+//                System.out.println("Answer: No");
+//            }
+//
+//            sample = "Did Neeson star in Schindler’s List?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList);
+//
+//            if(yesNoAnswer){
+//                System.out.println("Answer: Yes");
+//            }
+//            else{
+//                System.out.println("Answer: No");
+//            }
+//
+//            sample = "Did Swank win the oscar in 2000?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList);
+//
+//            if(yesNoAnswer){
+//                System.out.println("Answer: Yes");
+//            }
+//            else{
+//                System.out.println("Answer: No");
+//            }
+//
+//            sample = "Did a French actor win the oscar in 2012?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList);
+//
+//            if(yesNoAnswer){
+//                System.out.println("Answer: Yes");
+//            }
+//            else{
+//                System.out.println("Answer: No");
+//            }
+//
+//            sample = "Did a movie with Neeson win the oscar for best film?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList);
+//
+//            if(yesNoAnswer){
+//                System.out.println("Answer: Yes");
+//            }
+//            else{
+//                System.out.println("Answer: No");
+//            }
+            /*---------------------Partly WORKING------------------------------*/
+
+
+            /*---------------------NOT WORKING------------------------------*/
+//            sample = "Was Birdman the best movie in 2015?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList);
+//            if(yesNoAnswer){
+//                System.out.println("Answer: Yes");
+//            }
+//            else{
+//                System.out.println("Answer: No");
+//            }
+        }
     }
 
     public static void main(String[] args) {

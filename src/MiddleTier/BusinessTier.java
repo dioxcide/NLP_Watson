@@ -149,19 +149,12 @@ public class BusinessTier {
                 if (t4||t1) {
                     if(t4) {
                         if (!tables.contains("Person")) {
-                            System.out.println("PersonNAME: "+temp.word);
                             tables.add("Person");
-
-//                            if(dbAccess.searchIsActor(searchWord)){
-//                                System.out.println("IS AN ACTOR");
-//                                tables.add("Actor");
-//                            }
                         }
                         pNouns.add(new NounTableTuple(searchWord, "Person", "name"));
                     }
                     if (t1) {
                         if (!tables.contains("Movie")) {
-                            System.out.println("MOVIE NAME: "+temp.word);
                             tables.add("Movie");
                         }
                         pNouns.add(new NounTableTuple(searchWord, "Movie", "name"));
@@ -169,7 +162,6 @@ public class BusinessTier {
                 }
                 else if (t3) {
                     if (!tables.contains("Person")) {
-                        System.out.println("PobNAME: "+temp.word);
                         tables.add("Person");
                     }
                     pNouns.add(new NounTableTuple(searchWord, "Person", "pob"));
@@ -181,13 +173,10 @@ public class BusinessTier {
         for(WordProperty temp:querys){
             if(!temp.table.equals("N/A")){
                 if (!tables.contains(temp.table)) {
-                    System.out.println("ADDING :" + temp.table);
                     if(temp.table.equals("Actor") && !tables.contains("Person")) {
-
                         tables.add("Person");
                     }
                     if(temp.table.equals("Director") && !tables.contains("Person")) {
-                        System.out.println("ADDING PERSON FROM DIRECTOR");
                         tables.add("Person");
                     }
                     tables.add(temp.table);
@@ -204,6 +193,18 @@ public class BusinessTier {
                     pNouns.add(new NounTableTuple(temp.word, "Movie", "year"));
                 }
             }
+        }
+
+        System.out.println("OSCAR TYPE: "+oscarType.equals("N/A"));
+        System.out.println("TABLE TYPE: "+tables.contains("Oscar"));
+
+        if(tables.contains("Oscar") && !oscarType.equals("N/A")) {
+            pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
+        }
+        else if(!oscarType.equals("N/A") && !tables.contains("Oscar")){
+            System.out.println("In here");
+            tables.add("Oscar");
+            pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
         }
 
         for(int i = 0; i<tables.size();i++){
@@ -225,10 +226,6 @@ public class BusinessTier {
         }
         else if(whType.equals("When")) {
             qFactory.buildBase("year");
-        }
-
-        if(tables.contains("Oscar")) {
-            pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
         }
 
         if(numberOfTables == 1){

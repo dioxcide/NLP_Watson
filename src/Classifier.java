@@ -128,6 +128,26 @@ public class Classifier
 
     }
 
+    public static String computeWhichOscarType(String sample){
+        String words[] = sample.split(" ");
+
+        if(words[0].equals("Which")){
+            if(words[1].equals("actress")){
+                return "best-actress";
+            }
+            else if(words[1].equals("actor")){
+                return "best-actor";
+            }
+            else if(words[1].equals("movie")){
+                return "best-picture";
+            }
+            else if(words[1].equals("director")){
+                return "best-director";
+            }
+        }
+        return "N/A";
+    }
+
     static void part1(String args[])
     {
         ArrayList<String> sentenceList = new ArrayList<String>();
@@ -200,6 +220,9 @@ public class Classifier
             /*---------------------WORKING------------------------------*/
 //            sample = "Who directed Schindler’s List?";
 //            tupleTemp = Labeler.runSentence(sample);
+//            if(tupleTemp.oscarType.equals("N/A")){
+//                tupleTemp.oscarType = computeWhichOscarType(sample);
+//            }
 //            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 //
 //            if(!whAnswer.equals(null)){
@@ -211,6 +234,9 @@ public class Classifier
 //
 //            sample = "Who won the oscar for best actor in 2005?";
 //            tupleTemp = Labeler.runSentence(sample);
+//            if(tupleTemp.oscarType.equals("N/A")){
+//                tupleTemp.oscarType = computeWhichOscarType(sample);
+//            }
 //            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 //
 //            if(!whAnswer.equals(null)){
@@ -222,6 +248,9 @@ public class Classifier
 //
 //            sample = "When did Blanchett win an oscar for best actress?";
 //            tupleTemp = Labeler.runSentence(sample);
+//            if(tupleTemp.oscarType.equals("N/A")){
+//                tupleTemp.oscarType = computeWhichOscarType(sample);
+//            }
 //            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 //
 //            if(!whAnswer.equals(null)){
@@ -230,21 +259,55 @@ public class Classifier
 //            else{
 //                System.out.println("Answer: "+whAnswer);
 //            }
+//
+//            sample = "Who directed the best movie in 2010?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            System.out.println("OSCAR: "+tupleTemp.oscarType);
+//            if(tupleTemp.oscarType.equals("N/A")){
+//                tupleTemp.oscarType = computeWhichOscarType(sample);
+//            }
+//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
+//
+//            if(whAnswer != null){
+//                System.out.println("Answer: "+whAnswer);
+//            }
+//            else{
+//                System.out.println("Answer: No one");
+//            }
+//
+//            sample = "Which actress won the oscar in 2012?";
+//            tupleTemp = Labeler.runSentence(sample);
+//
+//            if(tupleTemp.oscarType.equals("N/A")){
+//                tupleTemp.oscarType = computeWhichOscarType(sample);
+//            }
+//
+//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
+//            if(whAnswer != null){
+//                System.out.println("Answer: "+whAnswer);
+//            }
+//            else{
+//                System.out.println("Answer: No one");
+//            }
+//
+//            sample = "Which movie won the oscar in 2000?";
+//            tupleTemp = Labeler.runSentence(sample);
+//            if(tupleTemp.oscarType.equals("N/A")){
+//                tupleTemp.oscarType = computeWhichOscarType(sample);
+//            }
+//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
+//            if(whAnswer != null){
+//                System.out.println("Answer: "+whAnswer);
+//            }
+//            else{
+//                System.out.println("Answer: No one");
+//            }
             /*---------------------Partly WORKING------------------------------*/
 
 
             /*---------------------NOT WORKING------------------------------*/
-            sample = "Who directed the best movie in 2010?";
-            tupleTemp = Labeler.runSentence(sample);
-            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 
-//            sample = "Which actress won the oscar in 2012?";
-//            tupleTemp = Labeler.runSentence(sample);
-//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 
-//            sample = "Which movie won the oscar in 2000?";
-//            tupleTemp = Labeler.runSentence(sample);
-//            whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 
 
         }

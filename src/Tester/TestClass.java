@@ -19,7 +19,7 @@ public class TestClass {
         System.out.println("\n-------------\n");
         for(WordProperty x : list)
         {
-            System.out.println(x.word + ":" + x.POStag);
+            System.out.println(x.word + ":" + x.POStag + ":" + x.table);
         }
         System.out.println("\n-------------\n");
     }
@@ -29,9 +29,8 @@ public class TestClass {
     {
         ArrayList<String> temp = new ArrayList<String>();
 
-        temp.add("When did Berry win an oscar for best actress ?");
-        temp.add("Did De Niro win the oscar in 1981 ?");
-        temp.add("Did a movie with Neeson win the oscar for best film?");
+        temp.add("Who directed Schindlier's List?");
+        temp.add("Who starred Schindler’s List?");
 
         for(String x : temp)
         {

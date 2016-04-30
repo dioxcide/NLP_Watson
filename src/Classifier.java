@@ -187,39 +187,40 @@ public class Classifier
     static void part2(String args[])
     {
         String sample = "Was Loren born in Italy?";
-        ArrayList<WordProperty> temp = Labeler.runSentence(sample);
+//        sample = "Did Swank win the oscar in 2000?";
+        sample = "Is Mighty Aphrodite by Allen?";
+        ArrayList<WordProperty> temp = Labeler.runSentence(sample).labeledWordList;
         BusinessTier bsnRn = new BusinessTier();
 
         bsnRn.determineQuestion(temp);
 
-//        sample = "Is Kubrick a director?";
+//        sample = "Was Birdman the best movie in 2015?";
 //        temp = Labeler.runSentence(sample);
 //        bsnRn.determineQuestion(temp);
 
 //        sample = "Did Neeson star in Schindler’s List?";
 //        temp = Labeler.runSentence(sample);
 //        bsnRn.determineQuestion(temp);
+//
+//        for(WordProperty wordproperty : temp)
+//        {
+//            System.out.println("\n--------------\n");
+//            System.out.println("Word: " + wordproperty.word);
+//            System.out.println("POSTag: " + wordproperty.POStag);
+//            System.out.println("NERTag: " + wordproperty.NERtag);
+//            System.out.println("Table: " + wordproperty.table);
+//            System.out.println("\n--------------\n");
+//        }
 
 //        sample = "Is Mighty Aphrodite by Allen?";
 //        temp = Labeler.runSentence(sample);
 //        bsnRn.determineQuestion(temp);
 
+//        sample = "Did Neeson   star in Schindler’s List?";
+//        temp = Labeler.runSentence(sample);
+//        bsnRn.determineQuestion(temp);
+
 //        sample = "Did Swank win the oscar in 2000?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
-
-
-/*--------------------------SOMEWHAT WORKS?????----------------------------------*/
-//        sample = "Did a French actor win the oscar in 2012?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
-
-/*-----------------------------These Dont work-----------------------------*/
-//        sample = "Was Birdman the best movie in 2015?";
-//        temp = Labeler.runSentence(sample);
-//        bsnRn.determineQuestion(temp);
-
-//        sample = "Did a movie with Neeson win the oscar for best film?";
 //        temp = Labeler.runSentence(sample);
 //        bsnRn.determineQuestion(temp);
     }

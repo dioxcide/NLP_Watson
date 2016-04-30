@@ -27,30 +27,15 @@ public class TestClass {
     //@Test
     public void M1()
     {
-        ArrayList<WordProperty> temp = Labeler.runSentence("Did a French actor win the oscar in 2012?");
+        ArrayList<String> temp = new ArrayList<String>();
 
-        print(temp);
+        temp.add("When did Berry win an oscar for best actress ?");
+        temp.add("Did De Niro win the oscar in 1981 ?");
+        temp.add("Did a movie with Neeson win the oscar for best film?");
 
-        temp = Labeler.runSentence("Did a British actor win the oscar in 2012?");
-
-        print(temp);
-
-
-        temp = Labeler.runSentence("Did a American actor win the oscar in 2012?");
-
-        print(temp);
-
-
-        temp = Labeler.runSentence("Did a Italian actor win the oscar in 2012?");
-
-        print(temp);
-
-
-        temp = Labeler.runSentence("Did a German actor win the oscar in 2012?");
-
-        print(temp);
-
-
-
+        for(String x : temp)
+        {
+            print(Labeler.runSentence(x).labeledWordList);
+        }
     }
 }

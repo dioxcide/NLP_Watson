@@ -186,8 +186,9 @@ public class Labeler {
         }
     }
 
-    public static ArrayList<WordProperty> runSentence(String sentence)
+    public static Tuple runSentence(String sentence)
     {
+        String questionWord = sentence.split(" ",2)[0];
         sentence = sentence.split(" ",2)[1];
         List<Tree> trees = parse(sentence);
         ArrayList<WordProperty> importantWords = new ArrayList<WordProperty>();
@@ -265,6 +266,6 @@ public class Labeler {
             x.word = replaceNationality(x.word);
         }
 
-        return finalList;
+        return new Tuple(finalList,questionWord);
     }
 }

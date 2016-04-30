@@ -149,7 +149,7 @@ public class Labeler {
     {
         for(WordProperty tuple : importantWords)
         {
-            tuple.NERtag = processNERWord(tuple.word);
+            //tuple.NERtag = processNERWord(tuple.word);
 
             if(!tuple.POStag.equals("NNP"))
             {
@@ -210,6 +210,13 @@ public class Labeler {
                 importantWords.get(i+1).POStag = "NNP";
                 importantWords.get(i).word = "NULL";
             }
+            else if(importantWords.get(i).POStag.equals("NNP") && importantWords.get(i+1).POStag.equals("CD"))
+            {
+                importantWords.get(i+1).word = importantWords.get(i).word + " " + importantWords.get(i+1).word;
+                importantWords.get(i+1).POStag = "NNP";
+                importantWords.get(i).word = "NULL";
+            }
+
         }
 
 

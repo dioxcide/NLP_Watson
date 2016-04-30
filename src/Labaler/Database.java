@@ -22,7 +22,17 @@ public class Database {
 
             for(String table : tables)
             {
-                ResultSet rs = c.createStatement().executeQuery("PRAGMA TABLE_INFO('" + table + "')");
+                ResultSet rs = c.createStatement().executeQuery("SELECT name FROM Movie");
+
+                while(rs.next())
+                {
+                    String movieName = rs.getString("name");
+
+                    if(movieName.matches(".*\\d+.*"))
+                    {
+                        System.out.println(movieName);
+                    }
+                }
 
 
                 rs.close();

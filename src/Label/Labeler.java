@@ -102,7 +102,7 @@ public class Labeler {
         return "N/A";
     }
 
-    public static String processNERWord(String w){
+    private static String processNERWord(String w){
 
 
         // creates a StanfordCoreNLP object, with POS tagging, lemmatization, NER, parsing, and coreference resolution
@@ -195,6 +195,8 @@ public class Labeler {
 
         String noun;
         String currentTag = "";
+        String award = "N/A";
+        String prevWord = "";
 
         for(Tree tree : trees)
         {
@@ -206,6 +208,20 @@ public class Labeler {
                         || subtree.label().value().equals("POS") || subtree.label().value().equals("VBN"))
                 {
                     importantWords.add(new WordProperty(subtree.getChild(0).value(),subtree.label().value()));
+
+                    if(prevWord.equals("best"))
+                    {
+                        if(subtree.getChild(0).value().equals("movie"))
+                        {
+                            award = "best-" + "picture";
+                        }
+                        else
+                        {
+                            award = "best-" + subtree.getChild(0).value();
+                        }
+                    }
+
+                    prevWord = subtree.getChild(0).value();
                 }
             }
         }
@@ -266,6 +282,6 @@ public class Labeler {
             x.word = replaceNationality(x.word);
         }
 
-        return new Tuple(finalList,questionWord);
+        return new Tuple(finalList,questionWord,award);
     }
 }

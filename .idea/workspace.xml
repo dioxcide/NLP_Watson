@@ -9,7 +9,6 @@
     <list default="true" id="f6d37aed-cdb5-4958-b200-f4e0d1c4b3f8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Label/Labeler.java" afterPath="$PROJECT_DIR$/src/Label/Labeler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Label/Tuple.java" afterPath="$PROJECT_DIR$/src/Label/Tuple.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tester/TestClass.java" afterPath="$PROJECT_DIR$/src/Tester/TestClass.java" />
     </list>
     <ignored path="NLP_Watson_Prototype.iws" />
@@ -31,47 +30,32 @@
     <favorites_list name="NLP_Watson_Prototype" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tester/TestClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#567#575#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Labeler.java" pinned="false" current-in-tab="true">
+    <leaf>
+      <file leaf-file-name="Labeler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6938776">
-              <caret line="188" column="26" selection-start-line="188" selection-start-column="26" selection-end-line="188" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="221" column="21" selection-start-line="221" selection-start-column="21" selection-end-line="221" selection-end-column="21" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#parse#0;class#Labeler#0" expanded="false" />
                 <element signature="method#processNER#0;class#Labeler#0" expanded="false" />
                 <element signature="method#associateTable#0;class#Labeler#0" expanded="false" />
                 <element signature="method#processNERWord#0;class#Labeler#0" expanded="false" />
                 <element signature="method#mapWords#0;class#Labeler#0" expanded="false" />
                 <element signature="method#replaceNationality#0;class#Labeler#0" expanded="false" />
-                <element signature="method#runSentence#0;class#Labeler#0" expanded="false" />
-                <element signature="e#6635#6649#0" expanded="true" />
-                <element signature="e#9568#9582#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tuple.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Label/Tuple.java">
+      <file leaf-file-name="TestClass.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Tester/TestClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
+            <state vertical-scroll-proportion="0.8072562">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,6 +129,22 @@
     <option name="width" value="1049" />
     <option name="height" value="806" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -170,6 +170,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -240,9 +243,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -685,13 +685,16 @@
       <option name="project" value="LOCAL" />
       <updated>1461981985613</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added field in Tuple called oscarType">
+      <created>1461987773770</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1461987773770</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestClass - 2016.04.29 at 21h 02m 19s.xml">
-      <configuration name="TestClass" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestClass - 2016.04.29 at 21h 02m 57s.xml">
       <configuration name="TestClass" configurationId="JUnit" />
     </history-entry>
@@ -717,6 +720,9 @@
       <configuration name="TestClass" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestClass - 2016.04.29 at 22h 42m 09s.xml">
+      <configuration name="TestClass" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestClass - 2016.04.30 at 12h 55m 09s.xml">
       <configuration name="TestClass" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -804,7 +810,8 @@
     <MESSAGE value="replaced nationality with associated country." />
     <MESSAGE value="added tuple with question word" />
     <MESSAGE value="fixed directed keyword" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed directed keyword" />
+    <MESSAGE value="added field in Tuple called oscarType" />
+    <option name="LAST_COMMIT_MESSAGE" value="added field in Tuple called oscarType" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -997,10 +1004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#processNER#0;class#NERParser#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,10 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#408#409#0" expanded="false" />
-            <element signature="e#435#436#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,10 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#processNER#0;class#NERParser#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,10 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#408#409#0" expanded="false" />
-            <element signature="e#435#436#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1081,10 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#processNER#0;class#NERParser#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1092,10 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="e#408#409#0" expanded="false" />
-            <element signature="e#435#436#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,13 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6393443">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/POSParsing/WordBank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7688679">
@@ -1172,10 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52487135">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#processNER#0;class#NERParser#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1183,12 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-          <folding>
-            <element signature="e#620#621#0" expanded="false" />
-            <element signature="e#653#654#0" expanded="false" />
-            <element signature="e#4301#4302#0" expanded="false" />
-            <element signature="e#4351#4352#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1196,7 +1162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.9041095">
           <caret line="114" column="41" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,10 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5890411">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#408#409#0" expanded="false" />
-            <element signature="e#435#436#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1215,7 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5986395">
           <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1223,7 +1183,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11111111">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1231,7 +1190,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.8502203">
           <caret line="62" column="32" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,20 +1214,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tester/TestClass.java">
+    <entry file="file://$PROJECT_DIR$/src/sample.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#567#575#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.56686044">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Label/Tuple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.15261628">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
@@ -1277,19 +1231,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6938776">
-          <caret line="188" column="26" selection-start-line="188" selection-start-column="26" selection-end-line="188" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="221" column="21" selection-start-line="221" selection-start-column="21" selection-end-line="221" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Labeler#0" expanded="false" />
             <element signature="method#processNER#0;class#Labeler#0" expanded="false" />
             <element signature="method#associateTable#0;class#Labeler#0" expanded="false" />
             <element signature="method#processNERWord#0;class#Labeler#0" expanded="false" />
             <element signature="method#mapWords#0;class#Labeler#0" expanded="false" />
             <element signature="method#replaceNationality#0;class#Labeler#0" expanded="false" />
-            <element signature="method#runSentence#0;class#Labeler#0" expanded="false" />
-            <element signature="e#6635#6649#0" expanded="true" />
-            <element signature="e#9568#9582#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tester/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8072562">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

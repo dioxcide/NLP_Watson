@@ -211,7 +211,7 @@ public class Labeler {
 
                     if(prevWord.equals("best"))
                     {
-                        if(subtree.getChild(0).value().equals("movie"))
+                        if(subtree.getChild(0).value().equals("movie") || subtree.getChild(0).value().equals("film"))
                         {
                             award = "best-" + "picture";
                         }

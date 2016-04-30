@@ -189,7 +189,7 @@ public class Classifier
         String sample = "Was Loren born in Italy?";
 //        sample = "Did Swank win the oscar in 2000?";
         sample = "Is Mighty Aphrodite by Allen?";
-        ArrayList<WordProperty> temp = Labeler.runSentence(sample);
+        ArrayList<WordProperty> temp = Labeler.runSentence(sample).labeledWordList;
         BusinessTier bsnRn = new BusinessTier();
 
         bsnRn.determineQuestion(temp);

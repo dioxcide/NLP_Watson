@@ -31,7 +31,7 @@ public class BusinessTier {
         return word;
     }
 
-    public boolean determineYesNoQuestion(ArrayList<WordProperty> querys){
+    public boolean determineYesNoQuestion(ArrayList<WordProperty> querys, String oscarType){
         ArrayList<String> tables = new ArrayList<>();
         ArrayList<NounTableTuple> pNouns = new ArrayList<>();
         int numberOfTables = 0;
@@ -103,6 +103,15 @@ public class BusinessTier {
                     pNouns.add(new NounTableTuple(temp.word, "Movie", "year"));
                 }
             }
+        }
+
+        if(tables.contains("Oscar") && !oscarType.equals("N/A")) {
+            pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
+        }
+        else if(!oscarType.equals("N/A") && !tables.contains("Oscar")){
+            System.out.println("In here");
+            tables.add("Oscar");
+            pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
         }
 
         for(int i = 0; i<tables.size();i++){
@@ -194,9 +203,6 @@ public class BusinessTier {
                 }
             }
         }
-
-        System.out.println("OSCAR TYPE: "+oscarType.equals("N/A"));
-        System.out.println("TABLE TYPE: "+tables.contains("Oscar"));
 
         if(tables.contains("Oscar") && !oscarType.equals("N/A")) {
             pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));

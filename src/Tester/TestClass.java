@@ -1,11 +1,11 @@
 package Tester;
 
-import Labaler.Database;
 import Label.*;
 import Label.WordProperty;
 
 import java.util.ArrayList;
 
+import org.junit.Test;
 
 
 /**
@@ -22,11 +22,12 @@ public class TestClass {
         }
         System.out.println("\n-------------\n");
     }
-
     //@Test
     public void M1()
+
     {
         ArrayList<String> temp = new ArrayList<String>();
+
 
         temp.add("When did Blanchett win an oscar for best actress?");
         temp.add("Who won the oscar for best actor in 2005?");

@@ -1,11 +1,11 @@
 package Tester;
 
-import Labaler.Database;
 import Label.*;
 import Label.WordProperty;
 
 import java.util.ArrayList;
 
+import org.junit.Test;
 
 
 /**

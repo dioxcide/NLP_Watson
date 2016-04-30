@@ -24,20 +24,33 @@ public class TestClass {
         System.out.println("\n-------------\n");
     }
 
-    @Test
+    //@Test
     public void M1()
     {
-        ArrayList<WordProperty> temp = Labeler.runSentence("Did Neeson star in Schindler's List ?");
+        ArrayList<WordProperty> temp = Labeler.runSentence("Did a French actor win the oscar in 2012?");
 
         print(temp);
 
-        temp = Labeler.runSentence("Did Robertson star in Spider-Man 2 ?");
-
-        System.out.println("Did Robertson star in Spider-Man 2 ?".matches(".*\\d+.*"));
+        temp = Labeler.runSentence("Did a British actor win the oscar in 2012?");
 
         print(temp);
 
-        Database.executeQuery("test");
+
+        temp = Labeler.runSentence("Did a American actor win the oscar in 2012?");
+
+        print(temp);
+
+
+        temp = Labeler.runSentence("Did a Italian actor win the oscar in 2012?");
+
+        print(temp);
+
+
+        temp = Labeler.runSentence("Did a German actor win the oscar in 2012?");
+
+        print(temp);
+
+
 
     }
 }

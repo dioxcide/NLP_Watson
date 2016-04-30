@@ -23,11 +23,14 @@ public class QueryFactory {
         ids.put("Movie", "Movie.id");
         ids.put("Person", "Person.id");
 
-
     }
 
     public void resetBase(){
         base = "SELECT *";
+    }
+
+    public void buildBase(String whType){
+        base = "SELECT "+whType;
     }
 
     public void buildTable(String table1){
@@ -60,10 +63,6 @@ public class QueryFactory {
     }
 
     public void buildTables(String table1, String table2, String table3){
-//        base = base+" FROM "+table1 +" INNER JOIN "+table2+" ON "+ids.get(table1)+
-//                " = "+ids.get(table2)
-//                +" INNER JOIN "+table3+" ON "+ids.get(table2)+
-//                " = "+ids.get(table3);
 
         base = base+" FROM "+table1 +" INNER JOIN "+table2+" ON ";
 
@@ -92,27 +91,107 @@ public class QueryFactory {
 
 
         if(table2 == "Movie" && table3 == "Oscar"){
-            base = base+" INNER JOIN "+table3+" ON "+ids.get(table1) + " = "+ids.get(table2+"2");
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3) + " = "+ids.get(table2+"2");
         }
         else if(table3 == "Movie" && table2 == "Oscar"){
-            base = base+" INNER JOIN "+table3+" ON "+ids.get(table1+"2")+" = "+ids.get(table2);
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3)+" = "+ids.get(table2+"2");
         }
         else if(table2 == "Movie" && table3 == "Actor"){
-            base = base+" INNER JOIN "+table3+" ON "+ids.get(table1) + " = "+ids.get(table2+"2");
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3) + " = "+ids.get(table2+"2");
         }
         else if(table3 == "Movie" && table2 == "Actor"){
-            base = base+" INNER JOIN "+table3+" ON "+ids.get(table1+"2")+" = "+ids.get(table2);
+            System.out.println("COLUMN Y U EMPTY???");
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3)+" = "+ids.get(table2+"2");
         }
         else if(table2 == "Movie" && table3 == "Director"){
-            base = base+" INNER JOIN "+table3+" ON "+ ids.get(table1) + " = "+ids.get(table2+"2");
+            base = base+" INNER JOIN "+table3+" ON "+ ids.get(table2) + " = "+ids.get(table3+"2");
         }
         else if(table3 == "Movie" && table2 == "Director"){
-            base = base+" INNER JOIN "+table3+" ON "+ids.get(table1+"2")+" = "+ids.get(table2);
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3)+" = "+ids.get(table2+"2");
         }
 
         else{
             base = base+" INNER JOIN "+table3+" ON "+ids.get(table2)+
                 " = "+ids.get(table3);
+        }
+    }
+
+    public void buildTables(String table1, String table2, String table3, String table4){
+        System.out.println("TABLE1 : "+table1+"   TABLE2: "+table2);
+
+
+        base = base+" FROM "+table1 +" INNER JOIN "+table2+" ON ";
+
+        if(table1 == "Movie" && table2 == "Oscar"){
+            base = base + ids.get(table1) + " = "+ids.get(table2+"2");
+        }
+        else if(table2 == "Movie" && table1 == "Oscar"){
+            base = base+ids.get(table1+"2")+" = "+ids.get(table2);
+        }
+        else if(table1 == "Movie" && table2 == "Actor"){
+            base = base + ids.get(table1) + " = "+ids.get(table2+"2");
+        }
+        else if(table2 == "Movie" && table1 == "Actor"){
+            base = base+ids.get(table1+"2")+" = "+ids.get(table2);
+        }
+        else if(table1 == "Movie" && table2 == "Director"){
+            base = base + ids.get(table1) + " = "+ids.get(table2+"2");
+        }
+        else if(table2 == "Movie" && table1 == "Director"){
+            base = base+ids.get(table1+"2")+" = "+ids.get(table2);
+        }
+        else{
+            base = base+ids.get(table1)+
+                    " = "+ids.get(table2);
+        }
+
+
+        if(table2 == "Movie" && table3 == "Oscar"){
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3+"2") + " = "+ids.get(table2);
+        }
+        else if(table3 == "Movie" && table2 == "Oscar"){
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3)+" = "+ids.get(table2+"2");
+        }
+        else if(table2 == "Movie" && table3 == "Actor"){
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3+"2") + " = "+ids.get(table2);
+        }
+        else if(table3 == "Movie" && table2 == "Actor"){
+            System.out.println("COLUMN Y U EMPTY???");
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3)+" = "+ids.get(table2+"2");
+        }
+        else if(table2 == "Movie" && table3 == "Director"){
+            base = base+" INNER JOIN "+table3+" ON "+ ids.get(table2) + " = "+ids.get(table3+"2");
+        }
+        else if(table3 == "Movie" && table2 == "Director"){
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table3)+" = "+ids.get(table2+"2");
+        }
+        else{
+            base = base+" INNER JOIN "+table3+" ON "+ids.get(table2)+
+                    " = "+ids.get(table3);
+        }
+
+        if(table3 == "Movie" && table4 == "Oscar"){
+            base = base+" INNER JOIN "+table4+" ON "+ids.get(table4+"2") + " = "+ids.get(table3);
+        }
+        else if(table4 == "Movie" && table3 == "Oscar"){
+            base = base+" INNER JOIN "+table4+" ON "+ids.get(table3+"2")+" = "+ids.get(table4);
+        }
+        else if(table3 == "Movie" && table4 == "Actor"){
+            base = base+" INNER JOIN "+table4+" ON "+ids.get(table4+"2") + " = "+ids.get(table3);
+        }
+        else if(table4 == "Movie" && table3 == "Actor"){
+            System.out.println("COLUMN Y U EMPTY???");
+            base = base+" INNER JOIN "+table4+" ON "+ids.get(table4)+" = "+ids.get(table3+"2");
+        }
+        else if(table3 == "Movie" && table4 == "Director"){
+            base = base+" INNER JOIN "+table4+" ON "+ ids.get(table3) + " = "+ids.get(table4+"2");
+        }
+        else if(table4 == "Movie" && table3 == "Director"){
+            base = base+" INNER JOIN "+table4+" ON "+ids.get(table4)+" = "+ids.get(table3+"2");
+        }
+        else{
+            base = base+" INNER JOIN "+table4+" ON "+ids.get(table3)+
+                    " = "+ids.get(table4);
         }
     }
 

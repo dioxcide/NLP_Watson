@@ -155,4 +155,33 @@ public class DBAccess {
 
         return false;
     }
+
+    public boolean searchIsActor(String name){
+        try{
+            //String dir = System.getProperty("user.dir");
+            Class.forName("org.sqlite.JDBC");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:" +
+                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+
+            Statement stmt;
+
+            stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM Person INNER JOIN ACTOR ON Actor.actor_id = Person.id WHERE Person.name" +
+                    " LIKE '%"+name+"'");
+
+            if(rs.next()){
+                return true;
+            }
+
+            rs.close();
+            stmt.close();
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
 }

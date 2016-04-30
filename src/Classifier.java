@@ -4,6 +4,7 @@ import java.util.Properties;
 import java.io.*;
 
 import Label.Labeler;
+import Label.Tuple;
 import Label.WordProperty;
 import MiddleTier.BusinessTier;
 import POSParsing.NERParser;
@@ -186,13 +187,17 @@ public class Classifier
 
     static void part2(String args[])
     {
-        String sample = "Was Loren born in Italy?";
+        String sample = "Did Neeson star in Schindler’s List?";
 //        sample = "Did Swank win the oscar in 2000?";
-        sample = "Is Mighty Aphrodite by Allen?";
-        ArrayList<WordProperty> temp = Labeler.runSentence(sample).labeledWordList;
+        sample = "Did a movie with Neeson win the oscar for best film?";
+        Tuple tupleTemp = Labeler.runSentence(sample);
         BusinessTier bsnRn = new BusinessTier();
 
-        bsnRn.determineQuestion(temp);
+        System.out.println("Q WORD: "+tupleTemp.questionWord);
+
+        bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList);
+
+//        bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord);
 
 //        sample = "Was Birdman the best movie in 2015?";
 //        temp = Labeler.runSentence(sample);

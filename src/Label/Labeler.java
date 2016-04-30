@@ -158,6 +158,34 @@ public class Labeler {
         }
     }
 
+    private static String replaceNationality(String nationality)
+    {
+        if(nationality.equals("Italian"))
+        {
+            return "Italy";
+        }
+        else if(nationality.equals("German"))
+        {
+            return "Germany";
+        }
+        else if(nationality.equals("British"))
+        {
+            return "UK";
+        }
+        else if(nationality.equals("French"))
+        {
+            return "France";
+        }
+        else if(nationality.equals("American"))
+        {
+            return "USA";
+        }
+        else
+        {
+            return nationality;
+        }
+    }
+
     public static ArrayList<WordProperty> runSentence(String sentence)
     {
         sentence = sentence.split(" ",2)[1];
@@ -231,6 +259,11 @@ public class Labeler {
         }
 
         mapWords(finalList);
+
+        for(WordProperty x : finalList)
+        {
+            x.word = replaceNationality(x.word);
+        }
 
         return finalList;
     }

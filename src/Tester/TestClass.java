@@ -1,7 +1,7 @@
 package Tester;
 
 import Labaler.Database;
-import Label.Labeler;
+import Label.*;
 import Label.WordProperty;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class TestClass {
         System.out.println("\n-------------\n");
         for(WordProperty x : list)
         {
-            System.out.println(x.word + ":" + x.POStag + ":" + x.table);
+            System.out.println(x.word + ":" + x.POStag );
         }
         System.out.println("\n-------------\n");
     }
@@ -29,12 +29,18 @@ public class TestClass {
     {
         ArrayList<String> temp = new ArrayList<String>();
 
-        temp.add("Who directed Schindlier's List?");
-        temp.add("Who starred Schindler’s List?");
+        temp.add("When did Blanchett win an oscar for best actress?");
+        temp.add("Who won the oscar for best actor in 2005?");
+        temp.add("Was Birdman the best movie in 2015?");
+
 
         for(String x : temp)
         {
-            print(Labeler.runSentence(x).labeledWordList);
+            Tuple tuple = Labeler.runSentence(x);
+
+            print(tuple.labeledWordList);
+            System.out.println("AWARD: " + tuple.oscarType);
+
         }
     }
 }

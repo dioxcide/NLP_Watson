@@ -75,21 +75,32 @@ public class BusinessTier {
                 }
 
             }
-
-            if(temp.POStag.equals("CD")){
-                pNouns.add(new NounTableTuple(temp.word, "Oscar", "year"));
-            }
         }
 
         for(WordProperty temp:querys){
             if(!temp.table.equals("N/A")){
                 if (!tables.contains(temp.table)) {
                     System.out.println("ADDING :" + temp.table);
-                    if(temp.table == "Actor" && !tables.contains("Person")) {
+                    if(temp.table.equals("Actor") && !tables.contains("Person")) {
 
                         tables.add("Person");
                     }
+                    if(temp.table.equals("Director") && !tables.contains("Person")) {
+                        System.out.println("ADDING PERSON FROM DIRECTOR");
+                        tables.add("Person");
+                    }
                     tables.add(temp.table);
+                }
+            }
+        }
+
+        for(WordProperty temp:querys){
+            if(temp.POStag.equals("CD")) {
+                if (tables.contains("Oscar")) {
+                    pNouns.add(new NounTableTuple(temp.word, "Oscar", "year"));
+                }
+                else{
+                    pNouns.add(new NounTableTuple(temp.word, "Movie", "year"));
                 }
             }
         }
@@ -121,7 +132,7 @@ public class BusinessTier {
         return evaluateAnswer(pNouns);
     }
 
-    public String determineWHQuestion(ArrayList<WordProperty> querys, String whType){
+    public String determineWHQuestion(ArrayList<WordProperty> querys, String whType, String oscarType){
         ArrayList<String> tables = new ArrayList<>();
         ArrayList<NounTableTuple> pNouns = new ArrayList<>();
         int numberOfTables = 0;
@@ -141,10 +152,10 @@ public class BusinessTier {
                             System.out.println("PersonNAME: "+temp.word);
                             tables.add("Person");
 
-                            if(dbAccess.searchIsActor(searchWord)){
-                                System.out.println("IS AN ACTOR");
-                                tables.add("Actor");
-                            }
+//                            if(dbAccess.searchIsActor(searchWord)){
+//                                System.out.println("IS AN ACTOR");
+//                                tables.add("Actor");
+//                            }
                         }
                         pNouns.add(new NounTableTuple(searchWord, "Person", "name"));
                     }
@@ -165,25 +176,32 @@ public class BusinessTier {
                 }
 
             }
-
-            if(temp.POStag.equals("CD")){
-                pNouns.add(new NounTableTuple(temp.word, "Oscar", "year"));
-            }
         }
 
         for(WordProperty temp:querys){
             if(!temp.table.equals("N/A")){
                 if (!tables.contains(temp.table)) {
                     System.out.println("ADDING :" + temp.table);
-                    if(temp.table == "Actor" && !tables.contains("Person")) {
+                    if(temp.table.equals("Actor") && !tables.contains("Person")) {
 
                         tables.add("Person");
                     }
-                    if(temp.table == "Director" && !tables.contains("Person")) {
-
+                    if(temp.table.equals("Director") && !tables.contains("Person")) {
+                        System.out.println("ADDING PERSON FROM DIRECTOR");
                         tables.add("Person");
                     }
                     tables.add(temp.table);
+                }
+            }
+        }
+
+        for(WordProperty temp:querys){
+            if(temp.POStag.equals("CD")) {
+                if (tables.contains("Oscar")) {
+                    pNouns.add(new NounTableTuple(temp.word, "Oscar", "year"));
+                }
+                else{
+                    pNouns.add(new NounTableTuple(temp.word, "Movie", "year"));
                 }
             }
         }
@@ -198,7 +216,7 @@ public class BusinessTier {
         numberOfTables = tables.size();
 
         if(whType.equals("Who") || whType.equals("Which")) {
-            if(tables.contains("People")) {
+            if(tables.contains("Person")) {
                 qFactory.buildBase("Person.name");
             }
             else{
@@ -207,6 +225,10 @@ public class BusinessTier {
         }
         else if(whType.equals("When")) {
             qFactory.buildBase("year");
+        }
+
+        if(tables.contains("Oscar")) {
+            pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
         }
 
         if(numberOfTables == 1){
@@ -230,9 +252,10 @@ public class BusinessTier {
     public boolean evaluateAnswer(ArrayList<NounTableTuple> pNouns){
         ArrayList<NounTableTuple> noDuplicates = new ArrayList<>();
         boolean contained = false;
+        boolean answer = false;
+        String query = "";
 
         for(NounTableTuple temp: pNouns){
-//            noDuplicates.add(temp);
             System.out.println("DUP NOUNS: " +temp.getNoun());
             for(NounTableTuple temp2: noDuplicates){
                 if(temp.getNoun().equals(temp2.getNoun())){
@@ -251,23 +274,27 @@ public class BusinessTier {
         int numberOfWheres = noDuplicates.size();
 
         if(numberOfWheres == 1){
-            qFactory.finalQuery(noDuplicates.get(0));
+            query = qFactory.finalQuery(noDuplicates.get(0));
         }
         else if(numberOfWheres == 2){
-            qFactory.finalQuery(noDuplicates.get(0), noDuplicates.get(1));
+            query = qFactory.finalQuery(noDuplicates.get(0), noDuplicates.get(1));
         }
         else if(numberOfWheres == 3){
-            qFactory.finalQuery(noDuplicates.get(0), noDuplicates.get(1), noDuplicates.get(2));
+            query = qFactory.finalQuery(noDuplicates.get(0), noDuplicates.get(1), noDuplicates.get(2));
         }
 
         qFactory.printQuery();
+        answer = dbAccess.executeQuery(query);
+
         qFactory.resetBase();
-        return true;
+        return answer;
     }
 
     public String evaluateWHAnswer(ArrayList<NounTableTuple> pNouns){
         ArrayList<NounTableTuple> noDuplicates = new ArrayList<>();
         boolean contained = false;
+        String answer = null;
+        String query = "";
 
         for(NounTableTuple temp: pNouns){
             System.out.println("DUP NOUNS: " +temp.getNoun());
@@ -288,18 +315,20 @@ public class BusinessTier {
         int numberOfWheres = noDuplicates.size();
 
         if(numberOfWheres == 1){
-            qFactory.finalQuery(noDuplicates.get(0));
+            query = qFactory.finalQuery(noDuplicates.get(0));
         }
         else if(numberOfWheres == 2){
-            qFactory.finalQuery(noDuplicates.get(0), noDuplicates.get(1));
+            query = qFactory.finalQuery(noDuplicates.get(0), noDuplicates.get(1));
         }
         else if(numberOfWheres == 3){
-            qFactory.finalQuery(noDuplicates.get(0), noDuplicates.get(1), noDuplicates.get(2));
+            query = qFactory.finalQuery(noDuplicates.get(0), noDuplicates.get(1), noDuplicates.get(2));
         }
 
         qFactory.printQuery();
+        answer = dbAccess.executeWHQuery(query);
+
         qFactory.resetBase();
 
-        return "Something";
+        return answer;
     }
 }

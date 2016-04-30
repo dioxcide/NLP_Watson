@@ -37,30 +37,25 @@ public class BusinessTier {
         int numberOfTables = 0;
 
         for(WordProperty temp: querys) {
-
+            System.out.println("WORD: "+temp.word);
             if (temp.POStag.equals("NNP")) {
 
                 String searchWord = containsApostrophe(temp.word);
-                boolean t1 = dbAccess.searchMovieName(searchWord);
+                String t1 = dbAccess.searchMovieName(searchWord);
                 boolean t3 = dbAccess.searchPersonLocation(searchWord);
                 boolean t4 = dbAccess.searchPersonName(searchWord);
 
-                if (t4||t1) {
+                if (t4|| !t1.equals("N/A")) {
                     if(t4) {
                         if (!tables.contains("Person")) {
-                            System.out.println("PersonNAME: "+temp.word);
                             tables.add("Person");
 
-//                            if(dbAccess.searchIsActor(searchWord)){
-//                                System.out.println("IS AN ACTOR");
-//                                tables.add("Actor");
-//                            }
                         }
                         pNouns.add(new NounTableTuple(searchWord, "Person", "name"));
                     }
-                    if (t1) {
+                    System.out.println("T1 : "+t1);
+                    if (!t1.equals("N/A") && t1.contains(temp.word)) {
                         if (!tables.contains("Movie")) {
-                            System.out.println("MOVIE NAME: "+temp.word);
                             tables.add("Movie");
                         }
                         pNouns.add(new NounTableTuple(searchWord, "Movie", "name"));
@@ -68,7 +63,6 @@ public class BusinessTier {
                 }
                 else if (t3) {
                     if (!tables.contains("Person")) {
-                        System.out.println("PobNAME: "+temp.word);
                         tables.add("Person");
                     }
                     pNouns.add(new NounTableTuple(searchWord, "Person", "pob"));
@@ -151,18 +145,18 @@ public class BusinessTier {
             if (temp.POStag.equals("NNP")) {
 
                 String searchWord = containsApostrophe(temp.word);
-                boolean t1 = dbAccess.searchMovieName(searchWord);
+                String t1 = dbAccess.searchMovieName(searchWord);
                 boolean t3 = dbAccess.searchPersonLocation(searchWord);
                 boolean t4 = dbAccess.searchPersonName(searchWord);
 
-                if (t4||t1) {
+                if (t4|| !t1.equals("N/A")) {
                     if(t4) {
                         if (!tables.contains("Person")) {
                             tables.add("Person");
                         }
                         pNouns.add(new NounTableTuple(searchWord, "Person", "name"));
                     }
-                    if (t1) {
+                    if (!t1.equals("N/A") && t1.contains(temp.word)) {
                         if (!tables.contains("Movie")) {
                             tables.add("Movie");
                         }

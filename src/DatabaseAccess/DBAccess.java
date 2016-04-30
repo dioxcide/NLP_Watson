@@ -126,7 +126,7 @@ public class DBAccess {
         return false;
     }
 
-    public boolean searchMovieName(String name){
+    public String searchMovieName(String name){
         try{
             //String dir = System.getProperty("user.dir");
             Class.forName("org.sqlite.JDBC");
@@ -137,10 +137,10 @@ public class DBAccess {
 
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Movie WHERE Movie.name" +
-                    " LIKE '"+name+"'");
+                    " LIKE '%"+name+"%'");
 
             if(rs.next()){
-                return true;
+                return rs.getString("name");
             }
 
             rs.close();
@@ -152,7 +152,7 @@ public class DBAccess {
             e.printStackTrace();
         }
 
-        return false;
+        return "N/A";
     }
 
     public boolean searchMovieYear(String year){

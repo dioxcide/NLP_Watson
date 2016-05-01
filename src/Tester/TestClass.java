@@ -22,7 +22,7 @@ public class TestClass {
         }
         System.out.println("\n-------------\n");
     }
-    @Test
+    //@Test
     public void M1()
 
     {

@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6d37aed-cdb5-4958-b200-f4e0d1c4b3f8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12_sources.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_8_11_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_8_11_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/stanford_corenlp_full_2015_12_09.xml" afterPath="$PROJECT_DIR$/.idea/libraries/stanford_corenlp_full_2015_12_09.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLP_Watson_Prototype.iml" afterPath="$PROJECT_DIR$/NLP_Watson_Prototype.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Label/Labeler.java" afterPath="$PROJECT_DIR$/src/Label/Labeler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tester/TestClass.java" afterPath="$PROJECT_DIR$/src/Tester/TestClass.java" />
     </list>
     <ignored path="NLP_Watson_Prototype.iws" />
@@ -35,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestClass.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tester/TestClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.26021504">
+              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Labeler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Labeler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48602152">
+            <state vertical-scroll-proportion="0.0">
               <caret line="238" column="44" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
               <folding>
                 <element signature="e#10041#10055#0" expanded="true" />
@@ -115,8 +110,8 @@
         <option value="$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java" />
         <option value="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" />
         <option value="$PROJECT_DIR$/src/Classifier.java" />
-        <option value="$PROJECT_DIR$/src/Tester/TestClass.java" />
         <option value="$PROJECT_DIR$/src/Label/Labeler.java" />
+        <option value="$PROJECT_DIR$/src/Tester/TestClass.java" />
       </list>
     </option>
   </component>
@@ -621,7 +616,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462048844597</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="removed question word after filtering the tree.">
+      <created>1462073922059</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1462073922059</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -670,7 +671,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30952382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29493546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29493546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -728,7 +729,8 @@
     <MESSAGE value="fixed an edge case" />
     <MESSAGE value="Err thang working except bidman" />
     <MESSAGE value="Fixed an edge case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed an edge case" />
+    <MESSAGE value="removed question word after filtering the tree." />
+    <option name="LAST_COMMIT_MESSAGE" value="removed question word after filtering the tree." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1187,6 +1189,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="238" column="44" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
+          <folding>
+            <element signature="e#10041#10055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1204,20 +1216,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tester/TestClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.26021504">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48602152">
-          <caret line="238" column="44" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
-          <folding>
-            <element signature="e#10041#10055#0" expanded="true" />
           </folding>
         </state>
       </provider>

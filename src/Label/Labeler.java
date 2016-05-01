@@ -89,7 +89,7 @@ public class Labeler {
 
     private static String associateTable(String word)
     {
-        String[] directorList = {"director","by","directed"};
+        String[] directorList = {"director","by","directed","direct"};
         String[] actorList = {"actor","actress","star","starred"};
         String[] oscarList = {"oscar"};
         String[] movieList = {"movie"};
@@ -151,6 +151,8 @@ public class Labeler {
         {
             //tuple.NERtag = processNERWord(tuple.word);
 
+            //System.out.println(tuple.word + ":" +tuple.POStag);
+
             if(!tuple.POStag.equals("NNP"))
             {
                 tuple.table = associateTable(tuple.word);
@@ -189,7 +191,7 @@ public class Labeler {
     public static Tuple runSentence(String sentence)
     {
         String questionWord = sentence.split(" ",2)[0];
-        sentence = sentence.split(" ",2)[1];
+        //sentence = sentence.split(" ",2)[1];
         List<Tree> trees = parse(sentence);
         ArrayList<WordProperty> importantWords = new ArrayList<WordProperty>();
 
@@ -224,6 +226,13 @@ public class Labeler {
                     prevWord = subtree.getChild(0).value();
                 }
             }
+        }
+
+        if(importantWords.get(0).word.equals("Was") || importantWords.get(0).word.equals("Did")
+        ||importantWords.get(0).word.equals("Is") || importantWords.get(0).word.equals("Who")
+        || importantWords.get(0).word.equals("Which") || importantWords.get(0).word.equals("When"))
+        {
+            importantWords.remove(0);
         }
 
 
@@ -274,6 +283,7 @@ public class Labeler {
                 finalList.add(x);
             }
         }
+
 
         mapWords(finalList);
 

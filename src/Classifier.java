@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.io.*;
+import java.util.Scanner;
 
 import Label.Labeler;
 import Label.Tuple;
@@ -16,7 +17,7 @@ import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
 import edu.stanford.nlp.util.CoreMap;
-
+import edu.stanford.nlp.util.SystemUtils;
 
 
 /**
@@ -208,26 +209,12 @@ public class Classifier
     static void part2(String args[])
     {
         ArrayList<String> sentenceList = new ArrayList<String>();
+        Scanner input = new Scanner(System.in);
         String path = new File("").getAbsolutePath();
         BusinessTier bsnRn = new BusinessTier();
         boolean yesNoAnswer = false;
         Tuple tupleTemp;
         String whAnswer = "";
-        String sample;
-        File f;
-        path+= "/src/sample2.txt";
-
-
-//        f = new File(args[0]);
-//
-//        if(!f.exists())
-//        {
-//            System.out.println("Error: " + args[0] + " is not a file. Running sample.txt");
-//        }
-//        else
-//        {
-//            path = args[0];
-//        }
 
         // this is your print stream, store the reference
         PrintStream err = System.err;
@@ -238,66 +225,44 @@ public class Classifier
             }
         }));
 
-        try
-        {
-            FileReader filereader = new FileReader(path);
-            BufferedReader bufferedreader = new BufferedReader(filereader);
+        System.out.println("Welcome! This is MiniWatson.");
 
-            String line = null;
-            while((line = bufferedreader.readLine()) != null)
-            {
-                if(line.length() == 0)
-                {
-                    continue;
-                }
-                sentenceList.add(line);
+        while(true) {
+            System.out.println("Please ask a question. Type 'q' when finished.");
+            String sentence = input.nextLine();
+
+            if(sentence.equals("q") || sentence.equals("Q")){
+                break;
             }
 
-            bufferedreader.close();
+            System.out.println("<QUERY>\n"+sentence);
+            tupleTemp = Labeler.runSentence(sentence);
 
-            for(int i = 0; i < sentenceList.size();i++)
-            {
-                System.out.println(sentenceList.get(i));
-                tupleTemp = Labeler.runSentence(sentenceList.get(i));
+            if (tupleTemp.questionWord.equals("Who") || tupleTemp.questionWord.equals("Which") || tupleTemp.questionWord.equals("When")) {
 
-                if(tupleTemp.questionWord.equals("Who") || tupleTemp.questionWord.equals("Which") || tupleTemp.questionWord.equals("When") ){
-
-                    if(tupleTemp.oscarType.equals("N/A")){
-                        tupleTemp.oscarType = computeWhichOscarType(sentenceList.get(i));
-                    }
-                    whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
-
-                    if(whAnswer != null){
-                        System.out.println("Answer: "+whAnswer);
-                    }
-                    else{
-                        System.out.println("Answer: No answer");
-                    }
-
-
+                if (tupleTemp.oscarType.equals("N/A")) {
+                    tupleTemp.oscarType = computeWhichOscarType(sentence);
                 }
-                else{
-                    yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList, tupleTemp.oscarType);
+                whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 
-                    if(yesNoAnswer){
-                        System.out.println("Answer: Yes");
-                    }
-                    else{
-                        System.out.println("Answer: No");
-                    }
+                if (whAnswer != null) {
+                    System.out.println("<Answer>\n" + whAnswer);
+                } else {
+                    System.out.println("<Answer>\nNo answer");
                 }
 
-                System.out.println("");
+
+            } else {
+                yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList, tupleTemp.oscarType);
+
+                if (yesNoAnswer) {
+                    System.out.println("<Answer>\nYes");
+                } else {
+                    System.out.println("<Answer>\nNo");
+                }
             }
-
+            System.out.println("");
         }
-        catch(Exception e)
-        {
-
-        }
-
-        // set everything bck to its original state afterwards
-        System.setErr(err);
     }
 
     public static void main(String[] args) {

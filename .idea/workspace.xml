@@ -7,16 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6d37aed-cdb5-4958-b200-f4e0d1c4b3f8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" afterPath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_8_11_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_8_11_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/stanford_corenlp_full_2015_12_09.xml" afterPath="$PROJECT_DIR$/.idea/libraries/stanford_corenlp_full_2015_12_09.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLP_Watson_Prototype.iml" afterPath="$PROJECT_DIR$/NLP_Watson_Prototype.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classifier.java" afterPath="$PROJECT_DIR$/src/Classifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java" afterPath="$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Factory/QueryFactory.java" afterPath="$PROJECT_DIR$/src/Factory/QueryFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" afterPath="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" />
     </list>
     <ignored path="NLP_Watson_Prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +46,7 @@
       <file leaf-file-name="Labeler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3842">
+            <state relative-caret-position="468">
               <caret line="238" column="44" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
               <folding />
             </state>
@@ -63,13 +56,14 @@
       <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Classifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="238" selection-end-column="12" />
+            <state relative-caret-position="118">
+              <caret line="234" column="22" selection-start-line="234" selection-start-column="22" selection-end-line="234" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#parse#0;class#Classifier#0" expanded="false" />
                 <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
                 <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+                <element signature="class#6705:6784" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -78,7 +72,7 @@
       <file leaf-file-name="BusinessTier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MiddleTier/BusinessTier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="468">
               <caret line="282" column="21" selection-start-line="282" selection-start-column="16" selection-end-line="282" selection-end-column="21" />
               <folding>
                 <element signature="method#BusinessTier#0;class#BusinessTier#0" expanded="false" />
@@ -94,8 +88,8 @@
       <file leaf-file-name="QueryFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Factory/QueryFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3519">
-              <caret line="214" column="18" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="18" />
+            <state relative-caret-position="349">
+              <caret line="214" column="35" selection-start-line="214" selection-start-column="35" selection-end-line="214" selection-end-column="35" />
               <folding>
                 <element signature="e#8214#8215#0" expanded="true" />
                 <element signature="e#8264#8265#0" expanded="true" />
@@ -107,7 +101,7 @@
       <file leaf-file-name="DBAccess.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2839">
+            <state relative-caret-position="468">
               <caret line="193" column="21" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
               <folding>
                 <element signature="method#executeQuery#0;class#DBAccess#0" expanded="false" />
@@ -120,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/src/sample2.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -175,10 +169,10 @@
         <option value="$PROJECT_DIR$/src/Label/Labeler.java" />
         <option value="$PROJECT_DIR$/src/Tester/TestClass.java" />
         <option value="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" />
-        <option value="$PROJECT_DIR$/src/Classifier.java" />
-        <option value="$PROJECT_DIR$/src/Factory/QueryFactory.java" />
         <option value="$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java" />
         <option value="$PROJECT_DIR$/src/sample2.txt" />
+        <option value="$PROJECT_DIR$/src/Factory/QueryFactory.java" />
+        <option value="$PROJECT_DIR$/src/Classifier.java" />
       </list>
     </option>
   </component>
@@ -223,7 +217,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -386,6 +379,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -767,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462073922059</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Almost done">
+      <created>1462235383349</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1462235383349</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -808,28 +809,28 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32492998" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2579425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42578548" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16204691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16204691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3163597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32492998" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42686892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3163597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -875,7 +876,8 @@
     <MESSAGE value="Err thang working except bidman" />
     <MESSAGE value="Fixed an edge case" />
     <MESSAGE value="removed question word after filtering the tree." />
-    <option name="LAST_COMMIT_MESSAGE" value="removed question word after filtering the tree." />
+    <MESSAGE value="Almost done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -897,6 +899,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -932,6 +935,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -960,6 +964,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -988,6 +993,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1016,6 +1022,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1044,6 +1051,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1088,6 +1096,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1132,6 +1141,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1168,6 +1178,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1181,6 +1192,7 @@
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1260,61 +1272,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MiddleTier/BusinessTier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="282" column="21" selection-start-line="282" selection-start-column="16" selection-end-line="282" selection-end-column="21" />
-          <folding>
-            <element signature="method#BusinessTier#0;class#BusinessTier#0" expanded="false" />
-            <element signature="method#containsApostrophe#0;class#BusinessTier#0" expanded="false" />
-            <element signature="method#determineYesNoQuestion#0;class#BusinessTier#0" expanded="false" />
-            <element signature="method#determineWHQuestion#0;class#BusinessTier#0" expanded="false" />
-            <element signature="method#evaluateAnswer#0;class#BusinessTier#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Factory/QueryFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3519">
-          <caret line="214" column="18" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="18" />
-          <folding>
-            <element signature="e#8214#8215#0" expanded="true" />
-            <element signature="e#8264#8265#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2839">
-          <caret line="193" column="21" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
-          <folding>
-            <element signature="method#executeQuery#0;class#DBAccess#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Labaler/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3842">
-          <caret line="238" column="44" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1328,15 +1289,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="193" column="21" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
+          <folding>
+            <element signature="method#executeQuery#0;class#DBAccess#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Factory/QueryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="214" column="35" selection-start-line="214" selection-start-column="35" selection-end-line="214" selection-end-column="35" />
+          <folding>
+            <element signature="e#8214#8215#0" expanded="true" />
+            <element signature="e#8264#8265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Label/Labeler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="238" column="44" selection-start-line="238" selection-start-column="44" selection-end-line="238" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MiddleTier/BusinessTier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="282" column="21" selection-start-line="282" selection-start-column="16" selection-end-line="282" selection-end-column="21" />
+          <folding>
+            <element signature="method#BusinessTier#0;class#BusinessTier#0" expanded="false" />
+            <element signature="method#containsApostrophe#0;class#BusinessTier#0" expanded="false" />
+            <element signature="method#determineYesNoQuestion#0;class#BusinessTier#0" expanded="false" />
+            <element signature="method#determineWHQuestion#0;class#BusinessTier#0" expanded="false" />
+            <element signature="method#evaluateAnswer#0;class#BusinessTier#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="238" selection-end-column="12" />
+        <state relative-caret-position="118">
+          <caret line="234" column="22" selection-start-line="234" selection-start-column="22" selection-end-line="234" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parse#0;class#Classifier#0" expanded="false" />
             <element signature="method#Categorize#0;class#Classifier#0" expanded="false" />
             <element signature="method#computeWhichOscarType#0;class#Classifier#0" expanded="false" />
+            <element signature="class#6705:6784" expanded="false" />
           </folding>
         </state>
       </provider>

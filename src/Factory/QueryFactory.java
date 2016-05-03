@@ -212,6 +212,6 @@ public class QueryFactory {
     }
 
     public void printQuery(){
-        System.out.println("QUERY: "+base);
+        System.out.println("<SQL>\n"+base);
     }
 }

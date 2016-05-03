@@ -42,8 +42,6 @@ public class QueryFactory {
         String secondTable = table2+"2";
         base = base+" FROM "+table1 +" INNER JOIN "+table2+" ON ";
 
-        System.out.println("IN HERE2");
-
         if(table1 == "Movie" && table2 == "Oscar"){
             base = base + ids.get(table1) + " = "+ids.get(secondTable);
         }
@@ -57,7 +55,6 @@ public class QueryFactory {
             base = base+ids.get(secondActorOscar)+" = "+ids.get(table2);
         }
         else{
-            System.out.println("IN HERE");
             base = base+ids.get(table1)+" = "+ids.get(table2);
         }
     }
@@ -100,7 +97,6 @@ public class QueryFactory {
             base = base+" INNER JOIN "+table3+" ON "+ids.get(table3) + " = "+ids.get(table2+"2");
         }
         else if(table3 == "Movie" && table2 == "Actor"){
-            System.out.println("COLUMN Y U EMPTY???");
             base = base+" INNER JOIN "+table3+" ON "+ids.get(table3)+" = "+ids.get(table2+"2");
         }
         else if(table2 == "Movie" && table3 == "Director"){
@@ -117,8 +113,6 @@ public class QueryFactory {
     }
 
     public void buildTables(String table1, String table2, String table3, String table4){
-        System.out.println("TABLE1 : "+table1+"   TABLE2: "+table2);
-
 
         base = base+" FROM "+table1 +" INNER JOIN "+table2+" ON ";
 
@@ -156,7 +150,6 @@ public class QueryFactory {
             base = base+" INNER JOIN "+table3+" ON "+ids.get(table3+"2") + " = "+ids.get(table2);
         }
         else if(table3 == "Movie" && table2 == "Actor"){
-            System.out.println("COLUMN Y U EMPTY???");
             base = base+" INNER JOIN "+table3+" ON "+ids.get(table3)+" = "+ids.get(table2+"2");
         }
         else if(table2 == "Movie" && table3 == "Director"){
@@ -180,7 +173,6 @@ public class QueryFactory {
             base = base+" INNER JOIN "+table4+" ON "+ids.get(table4+"2") + " = "+ids.get(table3);
         }
         else if(table4 == "Movie" && table3 == "Actor"){
-            System.out.println("COLUMN Y U EMPTY???");
             base = base+" INNER JOIN "+table4+" ON "+ids.get(table4)+" = "+ids.get(table3+"2");
         }
         else if(table3 == "Movie" && table4 == "Director"){

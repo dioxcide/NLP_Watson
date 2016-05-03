@@ -17,7 +17,7 @@ public class DBAccess {
             //String dir = System.getProperty("user.dir");
             Class.forName("org.sqlite.JDBC");
             Connection con = DriverManager.getConnection("jdbc:sqlite:" +
-                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+                    "SqliteDatabases\\oscar-movie_imdb.sqlite");
 
             Statement stmt;
 
@@ -45,7 +45,7 @@ public class DBAccess {
             //String dir = System.getProperty("user.dir");
             Class.forName("org.sqlite.JDBC");
             Connection con = DriverManager.getConnection("jdbc:sqlite:" +
-                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+                    "SqliteDatabases\\oscar-movie_imdb.sqlite");
 
             Statement stmt;
 
@@ -73,7 +73,7 @@ public class DBAccess {
             //String dir = System.getProperty("user.dir");
             Class.forName("org.sqlite.JDBC");
             Connection con = DriverManager.getConnection("jdbc:sqlite:" +
-                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+                    "SqliteDatabases\\oscar-movie_imdb.sqlite");
 
             Statement stmt;
 
@@ -102,7 +102,7 @@ public class DBAccess {
             //String dir = System.getProperty("user.dir");
             Class.forName("org.sqlite.JDBC");
             Connection con = DriverManager.getConnection("jdbc:sqlite:" +
-                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+                    "SqliteDatabases\\oscar-movie_imdb.sqlite");
 
             Statement stmt;
 
@@ -131,7 +131,7 @@ public class DBAccess {
             //String dir = System.getProperty("user.dir");
             Class.forName("org.sqlite.JDBC");
             Connection con = DriverManager.getConnection("jdbc:sqlite:" +
-                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+                    "SqliteDatabases\\oscar-movie_imdb.sqlite");
 
             Statement stmt;
 
@@ -160,7 +160,7 @@ public class DBAccess {
             //String dir = System.getProperty("user.dir");
             Class.forName("org.sqlite.JDBC");
             Connection con = DriverManager.getConnection("jdbc:sqlite:" +
-                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+                    "SqliteDatabases\\oscar-movie_imdb.sqlite");
 
             Statement stmt;
 
@@ -189,7 +189,7 @@ public class DBAccess {
             //String dir = System.getProperty("user.dir");
             Class.forName("org.sqlite.JDBC");
             Connection con = DriverManager.getConnection("jdbc:sqlite:" +
-                    "C:\\Users\\Tony\\Desktop\\SqliteDatabases\\oscar-movie_imdb.sqlite");
+                    "SqliteDatabases\\oscar-movie_imdb.sqlite");
 
             Statement stmt;
 

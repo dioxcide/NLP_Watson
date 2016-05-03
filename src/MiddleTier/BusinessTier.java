@@ -37,7 +37,6 @@ public class BusinessTier {
         int numberOfTables = 0;
 
         for(WordProperty temp: querys) {
-            System.out.println("WORD: "+temp.word);
             if (temp.POStag.equals("NNP")) {
 
                 String searchWord = containsApostrophe(temp.word);
@@ -53,7 +52,6 @@ public class BusinessTier {
                         }
                         pNouns.add(new NounTableTuple(searchWord, "Person", "name"));
                     }
-                    System.out.println("T1 : "+t1);
                     if (!t1.equals("N/A") && t1.contains(temp.word)) {
                         if (!tables.contains("Movie")) {
                             tables.add("Movie");
@@ -74,13 +72,10 @@ public class BusinessTier {
         for(WordProperty temp:querys){
             if(!temp.table.equals("N/A")){
                 if (!tables.contains(temp.table)) {
-                    System.out.println("ADDING :" + temp.table);
                     if(temp.table.equals("Actor") && !tables.contains("Person")) {
-
                         tables.add("Person");
                     }
                     if(temp.table.equals("Director") && !tables.contains("Person")) {
-                        System.out.println("ADDING PERSON FROM DIRECTOR");
                         tables.add("Person");
                     }
                     tables.add(temp.table);
@@ -103,7 +98,6 @@ public class BusinessTier {
             pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
         }
         else if(!oscarType.equals("N/A") && !tables.contains("Oscar")){
-            System.out.println("In here");
             tables.add("Oscar");
             pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
         }
@@ -129,8 +123,6 @@ public class BusinessTier {
         else if(numberOfTables == 4){
             qFactory.buildTables(tables.get(0), tables.get(1), tables.get(2), tables.get(3));
         }
-
-        qFactory.printQuery();
 
         return evaluateAnswer(pNouns);
     }
@@ -202,7 +194,6 @@ public class BusinessTier {
             pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
         }
         else if(!oscarType.equals("N/A") && !tables.contains("Oscar")){
-            System.out.println("In here");
             tables.add("Oscar");
             pNouns.add(new NounTableTuple(oscarType, "Oscar", "type"));
         }
@@ -241,8 +232,6 @@ public class BusinessTier {
             qFactory.buildTables(tables.get(0), tables.get(1), tables.get(2), tables.get(3));
         }
 
-        qFactory.printQuery();
-
         return evaluateWHAnswer(pNouns);
     }
 
@@ -253,10 +242,8 @@ public class BusinessTier {
         String query = "";
 
         for(NounTableTuple temp: pNouns){
-            System.out.println("DUP NOUNS: " +temp.getNoun());
             for(NounTableTuple temp2: noDuplicates){
                 if(temp.getNoun().equals(temp2.getNoun())){
-                    System.out.println("MATCH: "+temp.getNoun());
                     contained = true;
                 }
             }
@@ -294,10 +281,8 @@ public class BusinessTier {
         String query = "";
 
         for(NounTableTuple temp: pNouns){
-            System.out.println("DUP NOUNS: " +temp.getNoun());
             for(NounTableTuple temp2: noDuplicates){
                 if(temp.getNoun().equals(temp2.getNoun())){
-                    System.out.println("MATCH: "+temp.getNoun());
                     contained = true;
                 }
             }

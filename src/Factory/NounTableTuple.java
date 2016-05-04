@@ -8,12 +8,14 @@ public class NounTableTuple {
     private String table;
     private String column;
 
+    //Constructor
     public NounTableTuple(String n, String t, String c){
         this.noun = n;
         this.table = t;
         this.column = c;
     }
 
+    /*******************************GETTERS AND SETTERS*****************************/
     public String getNoun() {
         return noun;
     }
@@ -37,4 +39,5 @@ public class NounTableTuple {
     public void setColumn(String column) {
         this.column = column;
     }
+    /******************************************************************************/
 }

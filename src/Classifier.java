@@ -227,10 +227,12 @@ public class Classifier
 
         System.out.println("Welcome! This is MiniWatson.");
 
+        //While loop reading in questions
         while(true) {
             System.out.println("Please ask a question. Type 'q' when finished.");
             String sentence = input.nextLine();
 
+            //Ends the program if q is inputed
             if(sentence.equals("q") || sentence.equals("Q")){
                 break;
             }
@@ -238,6 +240,7 @@ public class Classifier
             System.out.println("<QUERY>\n"+sentence);
             tupleTemp = Labeler.runSentence(sentence);
 
+            //Splits the parsing up between yes or no and Wh- questions
             if (tupleTemp.questionWord.equals("Who") || tupleTemp.questionWord.equals("Which") || tupleTemp.questionWord.equals("When")) {
 
                 if (tupleTemp.oscarType.equals("N/A")) {
@@ -245,6 +248,7 @@ public class Classifier
                 }
                 whAnswer = bsnRn.determineWHQuestion(tupleTemp.labeledWordList, tupleTemp.questionWord, tupleTemp.oscarType);
 
+                //Determines what the answer is
                 if (whAnswer != null) {
                     System.out.println("<Answer>\n" + whAnswer);
                 } else {
@@ -255,6 +259,7 @@ public class Classifier
             } else {
                 yesNoAnswer = bsnRn.determineYesNoQuestion(tupleTemp.labeledWordList, tupleTemp.oscarType);
 
+                //Determines what the answer is
                 if (yesNoAnswer) {
                     System.out.println("<Answer>\nYes");
                 } else {

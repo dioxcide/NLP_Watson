@@ -9,6 +9,7 @@ public class QueryFactory {
     private Hashtable<String, String> ids;
     private String base;
 
+    //Constructor inits a new hashtable with the possible where clauses for each table
     public QueryFactory(){
         base = "SELECT *";
 
@@ -25,10 +26,18 @@ public class QueryFactory {
 
     }
 
+    /*
+        This method essentially resets the base SQL query. So when we build a new one the old one
+        isnt still stored
+     */
     public void resetBase(){
         base = "SELECT *";
     }
 
+    /***************************************************************************************************
+        The following 4 methods are basically the same. They build the first half of the SQL query and
+        depending on how many tables there are they inner join the tables properly in each method.
+     */
     public void buildBase(String whType){
         base = "SELECT "+whType;
     }
@@ -187,6 +196,12 @@ public class QueryFactory {
         }
     }
 
+    /****************************************************************************************/
+
+    /***************************************************************************************************
+     The following 4 methods are basically the same. They build the second half of the SQL query and
+     depending on how many where clauses there are they set them up correctly.
+     */
     public String finalQuery(NounTableTuple tuple){
 
         base = base + " WHERE "+tuple.getTable()+"."+tuple.getColumn()+" LIKE '%"+tuple.getNoun()+"%'";
@@ -211,6 +226,11 @@ public class QueryFactory {
         return base;
     }
 
+    /****************************************************************************************/
+
+    /*
+        This method just prints the string containing the SQL statement
+     */
     public void printQuery(){
         System.out.println("<SQL>\n"+base);
     }

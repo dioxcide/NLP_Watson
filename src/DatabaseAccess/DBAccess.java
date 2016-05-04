@@ -12,6 +12,10 @@ public class DBAccess {
     public DBAccess(){
     }
 
+    /*
+        Your standard DB access and sql statement execution.
+        This method executes any type of query and returns a boolean
+     */
     public boolean executeQuery(String query) {
         try{
             //String dir = System.getProperty("user.dir");
@@ -40,6 +44,10 @@ public class DBAccess {
         return false;
     }
 
+    /*
+        Your standard DB access and sql statement execution.
+        This method executes any type of query and returns a String
+     */
     public String executeWHQuery(String query){
         try{
             //String dir = System.getProperty("user.dir");
@@ -68,6 +76,12 @@ public class DBAccess {
         return null;
     }
 
+    /*
+        Your standard DB access and sql statement execution.
+        This method takes the string from the parameter and checks if
+        it is contained in the Person table and specifically in the column
+        "Name". This also returns a boolean
+     */
     public boolean searchPersonName(String name){
         try{
             //String dir = System.getProperty("user.dir");
@@ -97,6 +111,12 @@ public class DBAccess {
         return false;
     }
 
+    /*
+        Your standard DB access and sql statement execution.
+        This method takes the string from the parameter and checks if
+        it is contained in the Person table and specifically in the column
+        "Location". This also returns a boolean
+     */
     public boolean searchPersonLocation(String place){
         try{
             //String dir = System.getProperty("user.dir");
@@ -126,6 +146,12 @@ public class DBAccess {
         return false;
     }
 
+    /*
+        Your standard DB access and sql statement execution.
+        This method takes the string from the parameter and checks if
+        it is contained in the Movie table and specifically in the column
+        "Name". This also returns a boolean
+     */
     public String searchMovieName(String name){
         try{
             //String dir = System.getProperty("user.dir");
@@ -155,6 +181,12 @@ public class DBAccess {
         return "N/A";
     }
 
+    /*
+        Your standard DB access and sql statement execution.
+        This method takes the string from the parameter and checks if
+        it is contained in the Movie table and specifically in the column
+        "Year". This also returns a boolean
+     */
     public boolean searchMovieYear(String year){
         try{
             //String dir = System.getProperty("user.dir");
@@ -184,6 +216,12 @@ public class DBAccess {
         return false;
     }
 
+    /*
+        Your standard DB access and sql statement execution.
+        This method takes the string from the parameter and checks if
+        it is contained in the Person and Actor table and checks if there is
+        an entry for that persons name. This also returns a boolean
+     */
     public boolean searchIsActor(String name){
         try{
             //String dir = System.getProperty("user.dir");

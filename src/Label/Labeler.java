@@ -22,6 +22,7 @@ import edu.stanford.nlp.util.CoreMap;
 public class Labeler {
 
 
+    // convert a String sentence to a parse tree (TA's code)
     private static List<Tree> parse(String text) {
         Properties props = new Properties();
         props.setProperty("annotators", "tokenize, ssplit, pos, lemma, parse");
@@ -43,7 +44,11 @@ public class Labeler {
         return result;
     }
 
-
+    /*
+        for every non NNP tag words,
+        if the word matches within the lists below,
+        we return that string that's associated with that table
+    */
     private static String associateTable(String word)
     {
         String[] directorList = {"director","by","directed","direct"};
@@ -59,14 +64,15 @@ public class Labeler {
         return "N/A";
     }
 
+
+    /*
+         iterate through our list of important words and
+         give it an associated table
+    */
     private static void mapWords(ArrayList<WordProperty> importantWords)
     {
         for(WordProperty tuple : importantWords)
         {
-            //tuple.NERtag = processNERWord(tuple.word);
-
-            //System.out.println(tuple.word + ":" +tuple.POStag);
-
             if(!tuple.POStag.equals("NNP"))
             {
                 tuple.table = associateTable(tuple.word);
@@ -74,6 +80,10 @@ public class Labeler {
         }
     }
 
+    /*
+        Since we only have to deal with 5 nationalities,
+        we just replaced each nationality with its country
+     */
     private static String replaceNationality(String nationality)
     {
         if(nationality.equals("Italian"))
@@ -104,20 +114,27 @@ public class Labeler {
 
     public static Tuple runSentence(String sentence)
     {
+        // grab the first word that's in our sentence
+        // Which Where When etc ...
         String questionWord = sentence.split(" ",2)[0];
-        //sentence = sentence.split(" ",2)[1];
+
+
         List<Tree> trees = parse(sentence);
+
+        // our important data structure
         ArrayList<WordProperty> importantWords = new ArrayList<WordProperty>();
 
-        String noun;
-        String currentTag = "";
+        // our oscar reward
         String award = "N/A";
+
+        // keeps track for best ... type of rewards
         String prevWord = "";
 
         for(Tree tree : trees)
         {
             for(Tree subtree : tree)
             {
+                // our tags that we're filtering into our importWords list
                 if(subtree.label().value().equals("NNP") || subtree.label().value().equals("IN") || subtree.label().value().equals("NN")
                         || subtree.label().value().equals("VB") || subtree.label().value().equals("VBD") || subtree.label().value().equals("JJR") || subtree.label().value().equals("JJ")
                         || subtree.label().value().equals("JJS") || subtree.label().value().equals("CD") ||  subtree.label().value().equals("NNPS")
@@ -125,23 +142,28 @@ public class Labeler {
                 {
                     importantWords.add(new WordProperty(subtree.getChild(0).value(),subtree.label().value()));
 
+
                     if(prevWord.equals("best"))
                     {
+                        // best-film award
                         if(subtree.getChild(0).value().equals("movie") || subtree.getChild(0).value().equals("film"))
                         {
                             award = "best-" + "picture";
                         }
-                        else
+                        else // any other best award such as actor, actress etc...
                         {
                             award = "best-" + subtree.getChild(0).value();
                         }
                     }
 
+                    //update our previous word
                     prevWord = subtree.getChild(0).value();
                 }
             }
         }
 
+        // if our list contains a question word in the beginning, remove it from our list
+        // since it is not used for our analysis
         if(importantWords.get(0).word.equals("Was") || importantWords.get(0).word.equals("Did")
         ||importantWords.get(0).word.equals("Is") || importantWords.get(0).word.equals("Who")
         || importantWords.get(0).word.equals("Which") || importantWords.get(0).word.equals("When"))
@@ -149,7 +171,7 @@ public class Labeler {
             importantWords.remove(0);
         }
 
-
+        // convert any words that are capitalized but not an NNP to an NNP type
         for(WordProperty x : importantWords)
         {
             if(Character.isUpperCase(x.word.charAt(0)))
@@ -163,9 +185,13 @@ public class Labeler {
             }
         }
 
-        int size = importantWords.size();
-
-        for(int i = 0 ; i < size-1; i++)
+        /*
+            combine our NNP, POS, and CD together
+            this assumption is for movie names
+            for example [... , NNP, POS, NNP]
+            this will combine it as Schindlier's List in our list
+         */
+        for(int i = 0 ; i < importantWords.size()-1; i++)
         {
             if(importantWords.get(i).POStag.equals("NNP") && importantWords.get(i+1).POStag.equals("NNP"))
             {
@@ -188,6 +214,7 @@ public class Labeler {
         }
 
 
+        // finalList is our cleanedup list
         ArrayList<WordProperty> finalList = new ArrayList<WordProperty>();
 
         for(WordProperty x : importantWords)
@@ -198,9 +225,10 @@ public class Labeler {
             }
         }
 
-
+        // map associate words
         mapWords(finalList);
 
+        // replace the nationality with the actual country.
         for(WordProperty x : finalList)
         {
             x.word = replaceNationality(x.word);

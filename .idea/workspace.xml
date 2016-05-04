@@ -7,14 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6d37aed-cdb5-4958-b200-f4e0d1c4b3f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_8_11_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_8_11_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/stanford_corenlp_full_2015_12_09.xml" afterPath="$PROJECT_DIR$/.idea/libraries/stanford_corenlp_full_2015_12_09.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" afterPath="$PROJECT_DIR$/out/production/NLP_Watson_Prototype/Classifier.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/NLP_Watson_Prototype_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/NLP_Watson_Prototype_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Classifier.java" afterPath="$PROJECT_DIR$/src/Classifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java" afterPath="$PROJECT_DIR$/src/DatabaseAccess/DBAccess.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Factory/NounTableTuple.java" afterPath="$PROJECT_DIR$/src/Factory/NounTableTuple.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Factory/QueryFactory.java" afterPath="$PROJECT_DIR$/src/Factory/QueryFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" afterPath="$PROJECT_DIR$/src/MiddleTier/BusinessTier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="NLP_Watson_Prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,8 +50,8 @@
       <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Classifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1093">
-              <caret line="261" column="16" selection-start-line="261" selection-start-column="16" selection-end-line="261" selection-end-column="16" />
+            <state relative-caret-position="107">
+              <caret line="131" column="46" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#part1#0;class#Classifier#0" expanded="false" />
@@ -290,6 +286,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NLP_Watson_Prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NLP_Watson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NLP_Watson_Prototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NLP_Watson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artifacts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NLP_Watson_Prototype_jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -298,7 +330,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="D:/Downloads/sqlite-jdbc-3.8.11.2.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15527344" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
@@ -812,7 +844,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462318298990</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Comments added">
+      <created>1462327858311</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1462327858311</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -849,7 +888,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -863,7 +902,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16204691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16204691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -923,7 +962,8 @@
     <MESSAGE value="Almost done" />
     <MESSAGE value="Done" />
     <MESSAGE value="Done. Fixed minor equals operator confusion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done. Fixed minor equals operator confusion" />
+    <MESSAGE value="Comments added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1384,8 +1424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1093">
-          <caret line="261" column="16" selection-start-line="261" selection-start-column="16" selection-end-line="261" selection-end-column="16" />
+        <state relative-caret-position="107">
+          <caret line="131" column="46" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#part1#0;class#Classifier#0" expanded="false" />

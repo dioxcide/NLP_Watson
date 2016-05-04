@@ -1,11 +1,3 @@
 Manifest-Version: 1.0
-Class-Path: sources/ejml-0.23.jar sources/ejml-0.23-src.zip sources/ja
-  vax.json.jar sources/javax.json-api-1.0-sources.jar sources/joda-tim
-  e .jar sources/joda-time-2.9-sources.jar sources/jollyday.jar source
- s /j ollyday-0.4.7-sources.jar sources/protobuf.jar sources/slf4j-api
- .j ar sources/slf4j-simple.jar sources/stanford-corenlp-3.6.0.jar sou
- rce s/s tanford-corenlp-3.6.0-javadoc.jar sources/stanford-corenlp-3.
- 6.0- mode ls.jar sources/stanford-corenlp-3.6.0-sources.jar sources/x
- om.jar
 Main-Class: Classifier
 
